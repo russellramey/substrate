@@ -1,0 +1,26 @@
+/************************************************************************************
+*** THEME OPTIONS
+	Change any options below, these are simply the default
+************************************************************************************/
+/*
+Theme Name: Devmod
+Theme URI: http://wordpress.org/themes/devmod
+Author: Russell Ramey
+Author URI: http://russellramey.me/devmod
+Description: Basic starter theme for the developer in mind. Built with HTML5, CSS3, JS, and Bootstrap Grid. Modular code, files, and filesystem. Simply uncomment lines of code to add functionality quickly and easily. 
+Version: 1.0.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+
+Devmod WordPress Theme © 2017 Russell Ramey
+Devmod is distributed under the terms of the GNU GPL
+*/
+/************************************************************************************
+*** THEME STYLES
+	Add your specific theme styles below, or import theme from another file
+************************************************************************************/
+/* Reset */
+@import url(css/reset.css);
+/* Grid */
+@import url(css/grid.css);
