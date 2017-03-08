@@ -11,9 +11,9 @@ include $base . '/_theme-comments.php';
 
 
 /************************************************************************************
-*** Content functions
+*** Global variables functions
 ************************************************************************************/
-
+include $base . '/_global-variables.php';
 
 /************************************************************************************
 *** Taxonomy functions
@@ -29,7 +29,6 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 } elseif ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
 }
-
 // Add individual metaboxes
 include $base . '/_metaboxes-events.php';
 ?>

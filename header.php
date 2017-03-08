@@ -21,7 +21,7 @@
             <?php bloginfo( 'description' ); // WP Description ?>
         </div>
     </div>
-    <nav class="menu" role="navigation">
+    <nav class="nav-main" role="navigation">
         <div class="search">
             <?php get_search_form(); //WP Searchform ?>
         </div>
@@ -34,6 +34,5 @@
             ); ?>
     </nav>
 </header>
-
 
 <!-- CONTENT -->

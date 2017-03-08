@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <section id="content" role="main">
-    <header class="header">
+    <div class="entry-header">
         <h1 class="entry-title">
             <?php
                 if ( is_day() ) { printf( __( 'Daily Archives: %s', 'devmod' ), get_the_time( get_option( 'date_format' ) ) ); }
@@ -12,19 +12,19 @@ get_header(); ?>
                 else { _e( 'Archives', 'devmod' ); }
             ?>
         </h1>
-    </header>
+    </div>
 
     <?php
     // Start WP Loop
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'entry' ); ?>
+        <?php get_template_part( $partial . '/entry' ); ?>
     <?php
     // End WP Loop
     endwhile; endif; ?>
 
     <?php
     // Pagination
-    get_template_part( 'partials/pagination', 'single' ); ?>
+    get_template_part( $partial . '/pagination-single' ); ?>
 </section>
 
 <?php

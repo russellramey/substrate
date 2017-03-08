@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<div id="content" role="main">
+<section id="content" role="main">
     <?php
     // Start WP Loop
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -41,7 +41,7 @@ get_header(); ?>
     <?php
     // End WP Loop
     endwhile; endif; ?>
-</div>
+</section>
 
 <?php
 // Get the footer
