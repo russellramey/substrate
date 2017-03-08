@@ -1,11 +1,3 @@
-<?php
-/************************************************************************************
-*** Global varialbes
-	Variables for use in all templates and paritals
-************************************************************************************/
-global $partial;
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); //WP Post Classes ?>>
     <header class="entry-header">
         <?php edit_post_link(); //WP Edit Post Link ?>
@@ -23,20 +15,20 @@ global $partial;
         // If not search
         if ( !is_search() ) {
             // If not search show entry meta
-            get_template_part( $partial . '/entry-meta' );
+            get_template_part( 'templates/partials/entry-meta' );
         } ?>
     </header>
 
     <?php
     // Get content
     if(is_archive() || is_search() || !is_single() ) {
-        get_template_part( $partial . '/entry-summary');
+        get_template_part( 'templates/partials/entry-summary');
     } else {
-        get_template_part( $partial . '/entry-content');
+        get_template_part( 'templates/partials/entry-content');
     } ?>
 
-    <?php if ( !is_search() ) {
+    <?php if ( is_single() ) {
         // Add footer for search results
-        get_template_part( $partial . '/entry-footer' );
+        get_template_part( 'templates/partials/entry-footer' );
     } ?>
 </article>

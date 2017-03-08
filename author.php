@@ -1,10 +1,4 @@
 <?php
-/************************************************************************************
-*** Global varialbes
-	Variables for use in all templates and paritals
-************************************************************************************/
-global $partial;
-
 // Get the header
 get_header(); ?>
 
