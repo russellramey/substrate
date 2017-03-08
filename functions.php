@@ -1,18 +1,35 @@
 <?php
+// Global base url
+$base = 'includes/func';
 /************************************************************************************
-*** Main functions
-	import all function files to master function list
+*** Setup functions
 ************************************************************************************/
-// Setup
-include 'functions/_functions-setup.php';
-include 'functions/_functions-scripts.php';
-include 'functions/_functions-widgets.php';
-include 'functions/_functions-comments.php';
+include $base .'/_theme-setup.php';
+include $base . '/_theme-scripts.php';
+include $base . '/_theme-widgets.php';
+include $base . '/_theme-comments.php';
 
-// Content Types
 
-// Taxonomy
+/************************************************************************************
+*** Content functions
+************************************************************************************/
 
-// Metaboxes
 
+/************************************************************************************
+*** Taxonomy functions
+************************************************************************************/
+
+
+/************************************************************************************
+*** Metabox functions
+************************************************************************************/
+// Add CMB2 Library (includes/lib/cmb)
+if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
+	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
+} elseif ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
+	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
+}
+
+// Add individual metaboxes
+include $base . '/_metaboxes-events.php';
 ?>

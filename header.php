@@ -9,7 +9,7 @@
 <body <?php body_class(); // WP body classes?>>
 
 <!-- PAGE WRAPPER -->
-<div class="wrapper">
+<div class="wrapper container">
 
 <!-- HEADER -->
 <header class="header">
@@ -34,3 +34,6 @@
             ); ?>
     </nav>
 </header>
+
+
+<!-- CONTENT -->
