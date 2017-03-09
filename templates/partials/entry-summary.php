@@ -1,7 +1,19 @@
-<section class="entry-summary">
+<section class="entry-body">
     <?php
-    // Show excerpt
-    the_excerpt(); ?>
+    // If has thumbnail
+    if ( has_post_thumbnail() ) { ?>
+        <div class="entry-thumb">
+            <?php
+            // Show thumbnail
+            the_post_thumbnail(); ?>
+        </div>
+    <?php } ?>
+
+    <div class="entry-content">
+        <?php
+        // Show excerpt
+        the_excerpt(); ?>
+    </div>
 
     <?php
     // If is search
