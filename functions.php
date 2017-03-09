@@ -8,7 +8,8 @@ include $base .'/_theme-setup.php';
 include $base . '/_theme-scripts.php';
 include $base . '/_theme-widgets.php';
 include $base . '/_theme-comments.php';
-
+// Theme options
+include $base . '/_global-options.php';
 
 /************************************************************************************
 *** Global variables functions
@@ -31,4 +32,11 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 }
 // Add individual metaboxes
 include $base . '/_metaboxes-events.php';
+
+
+/************************************************************************************
+*** Shortcodes functions
+************************************************************************************/
+include $base . '/_shortcodes-global.php';
+include $base . '/_shortcodes-grid.php';
 ?>

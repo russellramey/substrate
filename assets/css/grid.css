@@ -2,7 +2,7 @@
 *** BOOTSTRAP GRID
   Docs: http://getbootstrap.com/css/#grid
 ************************************************************************************/
-.container {
+/*.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -23,12 +23,13 @@
   .container {
     width: 1170px;
   }
-}
-.container-fluid {
+}*/
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1170px;
 }
 .row {
   margin-left: -15px;

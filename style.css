@@ -28,3 +28,26 @@ Devmod is distributed under the terms of the GNU GPL
 *** THEME STYLES
 	Add your specific theme styles below, or import theme from another file
 ************************************************************************************/
+
+/************************************************************************************
+*** WORDPRESS STYLES
+	Default wordpress styles for WP generated classes
+************************************************************************************/
+/* Preformatted text
+   - used as comments for editor so hide on front end */
+pre{
+    display: none;
+}
+
+/* Alignment
+   - Default wordpress alignment for visual editor */
+.alignleft{
+    float: left;
+}
+.alignright{
+    float:right;
+}
+.aligncenter{
+    float:none;
+    margin: 0 auto;
+}
