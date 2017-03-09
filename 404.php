@@ -1,4 +1,5 @@
 <?php
+// Template Name: 404
 // Get the header
 get_header(); ?>
 
