@@ -32,6 +32,8 @@ include $base . '/_content-news.php';
 include $base . '/_shortcodes-global.php';
 include $base . '/_shortcodes-grid.php';
 
+include $base . '/_shortcodes-module.php';
+
 /************************************************************************************
 *** Metabox functions
 ************************************************************************************/
