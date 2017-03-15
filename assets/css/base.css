@@ -3957,7 +3957,7 @@ EXPAND/COLLAPSE & ACCORDION & TABS
     position: absolute;
     right: 10px;
     top: 50%;
-    margin-top: -13px;
+    margin-top: -14px;
 	font-size: 14px;
 }
 .dm-expand--list-action.active:after{
@@ -4009,7 +4009,7 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 	font-size: 14px;
     right: 10px;
     top: 50%;
-    margin-top: -10px;
+    margin-top: -12px;
 }
 .dm-accordion .dm-accordion--action.active:after{
     content: '\f077';

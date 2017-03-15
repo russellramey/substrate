@@ -24,6 +24,9 @@ include $base . '/_content-team.php';
 include $base . '/_content-event.php';
 include $base . '/_content-module.php';
 include $base . '/_content-news.php';
+include $base . '/_content-testimonial.php';
+include $base . '/_content-service.php';
+include $base . '/_content-casestudy.php';
 
 
 /************************************************************************************
