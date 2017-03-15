@@ -23,19 +23,19 @@ include $base . '/_content-project.php';
 include $base . '/_content-team.php';
 include $base . '/_content-event.php';
 include $base . '/_content-module.php';
-include $base . '/_content-resource.php';
 include $base . '/_content-news.php';
+
 
 /************************************************************************************
 *** Shortcodes functions
 ************************************************************************************/
 include $base . '/_shortcodes-global.php';
 include $base . '/_shortcodes-grid.php';
-
 include $base . '/_shortcodes-module.php';
 
 /************************************************************************************
 *** Metabox functions
+    Using CMB2 metabox framework. Docs: https://github.com/webdevstudios/CMB2/wiki
 ************************************************************************************/
 // Add CMB2 Library (includes/lib/cmb)
 if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
@@ -46,4 +46,5 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 // Add individual metaboxes
 include $base . '/_metaboxes-events.php';
 include $base . '/_metaboxes-team.php';
+include $base . '/_metaboxes-module.php';
 ?>

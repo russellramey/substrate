@@ -4,6 +4,7 @@
 	Shortcodes for elements: buttons, seperator, gap, spacer, videos etc...
 ************************************************************************************/
 
+
 // BUTTONS
 // [button title=" " url=" " size=" " class=" "]
 function button_func( $atts ) {
@@ -11,11 +12,24 @@ function button_func( $atts ) {
 		'url' => '#',
 		'class' => ' ',
 		'title' => 'Button',
-		'size' => ' '
+		'size' => 'default'
 	), $atts ) );
 	return "<a class='button button-{$size} {$class}' href='{$url}' target='_blank'>{$title}</a>";
 }
 add_shortcode( 'button', 'button_func' );
+
+
+// LINK
+// Use this to add grapical style to hyperlinks (add icon, and panel)
+// [link type=" "]
+function list_link_func( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'type' => '',
+		'date' => ''
+	), $atts ) );
+	return "<div class='link-panel link-{$type}'>" . $content . "</div>";
+}
+add_shortcode( 'link', 'list_link_func' );
 
 
 // YOUTUBE
@@ -48,7 +62,7 @@ add_shortcode( 'vimeo', 'vimeo_func' );
 // Add a line seperator to the content
 // [line]
 function line_func( $atts, $content = null ){
-	return '<div class="divide"></div>';
+	return '<div class="divider"></div>';
 }
 add_shortcode( 'line', 'line_func' );
 

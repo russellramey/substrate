@@ -1,7 +1,7 @@
 <?php
 /************************************************************************************
-*** Portfolio / Projects
-	Post type for 'projects'
+*** Module (Content Module)
+	Post type for 'Module'. Create repeatable code blocks to use as shortcodes
 ************************************************************************************/
 // Register Module Post Type
 function content_module() {
@@ -39,7 +39,7 @@ function content_module() {
 		'label'                 => __( 'Module', 'text_domain' ),
 		'description'           => __( 'Modular content block to be used as shortcode in other content types', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title' ),
+		'supports'              => array( 'title'),
 		'hierarchical'          => false,
 		'public'                => false,
 		'show_ui'               => true,
@@ -49,7 +49,7 @@ function content_module() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => false,
 		'can_export'            => true,
-		'has_archive'           => false,		
+		'has_archive'           => false,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'rewrite'               => false,

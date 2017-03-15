@@ -8,31 +8,38 @@
 </head>
 <body <?php body_class(); // WP body classes?>>
 
-<!-- PAGE WRAPPER -->
-<div class="wrapper container">
+
 
 <!-- HEADER -->
-<header class="header">
-    <div class="brand">
-        <div class="brand-logo">
-            <a href="/"><h1><?php echo bloginfo('name'); ?></h1></a>
+<header class="dm-header">
+    <div class="dm-nav--utility">
+        <ul class="off-lft">
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+        </ul>
+    </div>
+    <div class="dm-header--main">
+        <div class="dm-logo">
+            <!--<img src="img/sabre-logo-slab.png" width="auto" height="auto">-->
+            <span class="dm-tagline">Site Name</span>
         </div>
-        <div class="brand-desc">
-            <?php bloginfo( 'description' ); // WP Description ?>
+        <div class="dm-nav--main">
+            <?php
+                // WP menu
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu'
+                    )
+                );
+            ?>
+        </div>
+        <div class="dm-search">
+            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
         </div>
     </div>
-    <nav class="nav-main" role="navigation">
-        <div class="search">
-            <?php get_search_form(); //WP Searchform ?>
-        </div>
-        <?php
-            // WP menu
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'main-menu'
-                )
-            ); ?>
-    </nav>
 </header>
 
 <!-- CONTENT -->
+<div class="wrapper container">

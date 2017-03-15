@@ -1,6 +1,6 @@
 /************************************************************************************
 *** THEME OPTIONS
-	Change any options below, these are simply the default
+	  Change any options below, these are simply the default
 ************************************************************************************/
 /*
 Theme Name: Devmod
@@ -14,31 +14,29 @@ Devmod WordPress Theme © 2017 Russell Ramey
 Devmod is distributed under the terms of the GNU GPL
 */
 /************************************************************************************
-*** THEME RESET and BASE
-	Add your specific theme styles below, or import theme from another file
+*** THEME RESET and BASE and COMPENENTS
+	  Add your specific theme styles below, or import theme from another file,
+    Bootstrap is used for Grid and Base Components. Docs: http://getbootstrap.com/css
 ************************************************************************************/
-/* Reset */
-@import url('assets/css/reset.css');
-/* Grid */
-@import url('assets/css/grid.css');
 /* Base */
 @import url('assets/css/base.css');
 
 /************************************************************************************
 *** THEME STYLES
-	Add your specific theme styles below, or import theme from another file
+	  Add your specific theme styles below, or import theme from another file
 ************************************************************************************/
+
+
 
 /************************************************************************************
 *** WORDPRESS STYLES
-	Default wordpress styles for WP generated classes
+	  Default wordpress styles for WP generated classes
 ************************************************************************************/
 /* Preformatted text
    - used as comments for editor so hide on front end */
 pre{
     display: none;
 }
-
 /* Alignment
    - Default wordpress alignment for visual editor */
 .alignleft{

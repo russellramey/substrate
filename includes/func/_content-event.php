@@ -40,7 +40,7 @@ function events() {
 		'description'           => __( 'Used for events or calendar items', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -50,11 +50,12 @@ function events() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => false,
 		'can_export'            => true,
-		'has_archive'           => true,		
+		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 		'show_in_rest'          => false,
+		'rewrite' 			  	=> array( 'with_front' => false),
 	);
 	register_post_type( 'events', $args );
 

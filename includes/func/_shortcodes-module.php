@@ -10,14 +10,16 @@ function module_insert_func( $atts, $content = null ) {
 	), $atts ) );
 	ob_start(); ?>
 
-	<div class="content-module">
+
 		<?php query_posts(array(
 				'post_type' => 'module',
 				'name' => $slug )
 		); the_post();  ?>
-			<?php the_title(); ?>
+		<div class="content-module row" style="padding:40px 0;">
+			<?php the_content(); ?>
+		</div>
 		<?php wp_reset_query(); wp_reset_postdata(); ?>
-	</div>
+
 
 	<?php $content_module = ob_get_clean();
 		  return $content_module;

@@ -80,4 +80,7 @@ function remove_admin_bar_links() {
     $wp_admin_bar->remove_menu('customize');      // Remove the content link
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+
+
 ?>

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); //WP Post Classes ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('dm-panel'); //WP Post Classes ?>>
     <header class="entry-header">
         <?php edit_post_link(); //WP Edit Post Link ?>
         <?php
