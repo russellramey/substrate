@@ -119,6 +119,6 @@ function add_module_output() {
 // The Event Location Metabox
 function module_output_code() {
 	global $post;
-	echo '<p style="font-size:16px;"><b>[module title="' . $post->post_name  . '"]</b></p>';
-	echo '<p><i>Copy and paste this shortcode to insert this module into a post or page editor</i></p>';
+	echo '<p style="font-size:16px;">[module title="' . $post->post_name  . '"]</p>';
+	echo '<p><i>Copy this shortcode and paste it into any content type editor (ex. post or page)</i></p>';
 }
