@@ -39,7 +39,7 @@ function content_module() {
 		'label'                 => __( 'Module', 'text_domain' ),
 		'description'           => __( 'Modular content block to be used as shortcode in other content types', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title'),
+		'supports'              => array( 'title', 'editor'),
 		'hierarchical'          => false,
 		'public'                => false,
 		'show_ui'               => true,

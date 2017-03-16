@@ -6,16 +6,16 @@
 //[module slug=" "]
 function module_insert_func( $atts, $content = null ) {
 	extract( shortcode_atts( array(
-		'slug' => ''
+		'title' => ''
 	), $atts ) );
 	ob_start(); ?>
 
 
 		<?php query_posts(array(
 				'post_type' => 'module',
-				'name' => $slug )
+				'name' => $title )
 		); the_post();  ?>
-		<div class="content-module row" style="padding:40px 0;">
+		<div class="dm-module dm-module--full row" style="padding:40px 0;">
 			<?php the_content(); ?>
 		</div>
 		<?php wp_reset_query(); wp_reset_postdata(); ?>

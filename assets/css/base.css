@@ -108,15 +108,6 @@ COLORS
 .txt-black{
 	color: #333333 !important;
 }
-.txt-red{
-	color: #e50000 !important;
-}
-.txt-green{
-	color: #23826F !important;
-}
-.txt-slate{
-	color: #4A5767 !important;
-}
 
 /* Background Colors */
 .bkg-black{
@@ -136,21 +127,6 @@ COLORS
 }
 .bkg-grey-dark{
 	background: #555555;
-}
-.bkg-red{
-	background: #e50000;
-}
-.bkg-red-dark{
-	background: #AC0000;
-}
-.bkg-slate{
-	background: #4A5767;
-}
-.bkg-green{
-	background: #23826F;
-}
-.bkg-green-dark{
-	background: #195e51;
 }
 /**************************************************************
 TYPOGRAOPHY

@@ -40,7 +40,7 @@ function news() {
 		'description'           => __( 'For news items, updates, press releases, articles, etc...', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
