@@ -41,32 +41,32 @@ $.fn.edl_headerScroll = function(){
 $.fn.edl_utility = function(){
     $(document).scroll(function() {
         if ($(document).scrollTop() > 300) {
-    		$('.dm-header').addClass('hide-utility');
-            $('.dm-nav--utility-spacer').hide();
+    		$('.bt-header').addClass('hide-utility');
+            $('.bt-nav--utility-spacer').hide();
         } else {
-        	$('.dm-header').removeClass('hide-utility');
-            $('.dm-nav--utility-spacer').show();
+        	$('.bt-header').removeClass('hide-utility');
+            $('.bt-nav--utility-spacer').show();
         }
     });
 };
 // Mega Navigation
 $.fn.edl_meganav = function(){
     $(this).click(function() {
-        $('.dm-nav--mega').toggleClass('show-mega');
+        $('.bt-nav--mega').toggleClass('show-mega');
         $('body').toggleClass('noscroll');
         return false;
     });
-    $('.dm-nav--mega a').click(function(){
-        $('.dm-nav--mega').removeClass('show-mega');
+    $('.bt-nav--mega a').click(function(){
+        $('.bt-nav--mega').removeClass('show-mega');
         $('body').removeClass('noscroll');
     });
 };
 // Accordion
 $.fn.edl_accordion = function(){
     // Set your action element
-    var action = $('.dm-accordion--action');
+    var action = $('.bt-accordion--action');
     // Set you hidden content element
-    var moredetails = $('.dm-accordion--content');
+    var moredetails = $('.bt-accordion--content');
     $(action).click(function(){
         if (!$(this).hasClass('active')){
             $(action).removeClass('active');
@@ -83,7 +83,7 @@ $.fn.edl_accordion = function(){
 // Expand & Collapes
 $.fn.edl_expand = function(){
     $(this).click(function(){
-        var moredetails = $(this).parent().parent().children('.dm-expand--content');
+        var moredetails = $(this).parent().parent().children('.bt-expand--content');
         var viewmore = $(this);
         var txt = moredetails.is(':visible') ? 'View more +' : 'View less -';
         $(this).parent().find(viewmore).text(txt);
@@ -94,7 +94,7 @@ $.fn.edl_expand = function(){
 // Expand & Collapes list
 $.fn.edl_expand_list = function(){
     $(this).click(function(){
-        var moredetails = $(this).parent().children('.dm-expand--list-content');
+        var moredetails = $(this).parent().children('.bt-expand--list-content');
         var viewmore = $(this);
         $(this).parent().find(moredetails).slideToggle(150);
         $(this).toggleClass('active');
@@ -104,14 +104,14 @@ $.fn.edl_expand_list = function(){
 // Tabs
 $.fn.edl_tabs = function (){
     var $this = $(this);
-    $(".dm-tab--nav li").click(function(e){
+    $(".bt-tab--nav li").click(function(e){
         if (!$(this).hasClass("active")) {
             var tabNum = $(this).index();
             var nthChild = tabNum+1;
-            $(".dm-tab--nav li.active").removeClass("active");
+            $(".bt-tab--nav li.active").removeClass("active");
             $(this).addClass("active");
-            $(".dm-tab--panels li.active").removeClass("active");
-            $(".dm-tab--panels li:nth-child("+nthChild+")").addClass("active");
+            $(".bt-tab--panels li.active").removeClass("active");
+            $(".bt-tab--panels li:nth-child("+nthChild+")").addClass("active");
         }
     return false;
     });
@@ -119,7 +119,7 @@ $.fn.edl_tabs = function (){
 // Notices
 $.fn.edl_notice = function (){
     $(this).click(function(){
-        $('.dm-notice').hide();
+        $('.bt-notice').hide();
         return false;
     });
 };

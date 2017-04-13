@@ -11,8 +11,8 @@
 
 
 <!-- HEADER -->
-<header class="dm-header">
-    <div class="dm-nav--utility">
+<header class="bt-header">
+    <div class="bt-nav--utility">
         <ul class="off-lft">
             <li><a href="#">Utility Item</a></li>
             <li><a href="#">Utility Item</a></li>
@@ -20,12 +20,12 @@
             <li><a href="#">Utility Item</a></li>
         </ul>
     </div>
-    <div class="dm-header--main">
-        <div class="dm-logo">
+    <div class="bt-header--main">
+        <div class="bt-logo">
             <!--<img src="img/sabre-logo-slab.png" width="auto" height="auto">-->
-            <span class="dm-tagline">Site Name</span>
+            <span class="bt-tagline">Site Name</span>
         </div>
-        <div class="dm-nav--main">
+        <div class="bt-nav--main">
             <?php
                 // WP menu
                 wp_nav_menu(
@@ -34,9 +34,6 @@
                     )
                 );
             ?>
-        </div>
-        <div class="dm-search">
-            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
         </div>
     </div>
 </header>

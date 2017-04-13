@@ -1,6 +1,6 @@
 </div>
 <!-- FOOTER -->
-<footer class="dm-footer" role="contentinfo">
+<footer class="bt-footer" role="contentinfo">
     <div class="copyright">
         <?php echo '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' )); //WP Copyright ?>
     </div>

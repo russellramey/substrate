@@ -1,7 +1,8 @@
 <?php
 /************************************************************************************
 *** Module Metaboxes
-	Global options for the 'Module' post type
+	- Global options for the 'Module' post type
+	- Uses CMB2 Metabox library
 ************************************************************************************/
 // Module setup
 add_action( 'cmb2_init', 'module_metabox_setup' );
@@ -11,14 +12,14 @@ function module_metabox_setup() {
 	$module_setup = new_cmb2_box( array(
 		'id'            => $prefix . 'module_setup',
 		'title'         => __( 'Module Setup', 'cmb2' ),
-		'object_types'  => array( 'module', ), // Post type
+		'object_types'  => array( 'module'), // Post type
 	));
 
 	// Module Width Selector
 	$module_setup->add_field( array(
-	    'name'             => 'Module width',
-	    'desc'             => 'Select the width of the entire module<br />- Fixed (Module will flow inline with max width of parent content)<br />- Full (Module will fill width of screen)',
-	    'id'               => $prefix . 'module_width',
+	    'name'             => 'Module Outer Width',
+	    'desc'             => 'Select the width of the entire module<br />- Fixed (Module will flow inline with max width of parent content)<br />- Full (Module will fill width of screen, background and all)',
+	    'id'               => $prefix . 'module-width',
 	    'type'             => 'select',
 	    'show_option_none' => false,
 	    'default'          => 'fixed',
@@ -29,34 +30,24 @@ function module_metabox_setup() {
 	));
 	// Module Width Selector
 	$module_setup->add_field( array(
-	    'name'             => 'Module Height',
-	    'desc'             => 'Select the width of the entire module<br />- Fixed (Module will flow inline with max width of parent content)<br />- Full (Module will fill width of screen)',
-	    'id'               => $prefix . 'module_height',
-	    'type'             => 'select',
-	    'show_option_none' => false,
-	    'default'          => 'auto',
-	    'options'          => array(
-	        'auto' => __( 'Auto', 'cmb2' ),
-	        'small'   => __( 'Small', 'cmb2' ),
-			'medium'   => __( 'Medium', 'cmb2' ),
-			'large'   => __( 'Large', 'cmb2' ),
-	    ),
-	));
-	// Set max content width
-	$module_setup->add_field( array(
-		'name' => 'Content width',
-		'description' => '<br />Pixel value to ',
-		'id'   => $prefix . 'module-content-width',
-		'type'  => 'text_small',
-	));
-
-	// Module Width Selector
-	$module_setup->add_field( array(
-	    'name'             => 'Module Content Width',
+	    'name'             => 'Module Inner Width',
 	    'desc'             => 'Option to constrain or expand the width of the inner content beyond the default container (default is 100% of container)',
 	    'id'               => $prefix . 'module-content-width',
 	    'type'             => 'select',
 	    'show_option_none' => false,
+	    'default'          => 'fixed',
+	    'options'          => array(
+			'fixed' => __( 'Fixed', 'cmb2' ),
+	        'full-width'   => __( 'Full Width', 'cmb2' ),
+	    ),
+	));
+	// Module Width Selector
+	$module_setup->add_field( array(
+	    'name'             => 'Module Height',
+	    'desc'             => 'Select the width of the entire module<br />- Fixed (Module will flow inline with max width of parent content)<br />- Full (Module will fill width of screen)',
+	    'id'               => $prefix . 'module-height',
+	    'type'             => 'select',
+	    'show_option_none' => false,
 	    'default'          => 'auto',
 	    'options'          => array(
 	        'auto' => __( 'Auto', 'cmb2' ),
@@ -65,8 +56,6 @@ function module_metabox_setup() {
 			'large'   => __( 'Large', 'cmb2' ),
 	    ),
 	));
-
-
 }
 
 // Module background
@@ -77,7 +66,8 @@ function module_metabox_background() {
 	$module_background = new_cmb2_box( array(
 		'id'            => $prefix . 'module_background',
 		'title'         => __( 'Module Background', 'cmb2' ),
-		'object_types'  => array( 'module', ), // Post type
+		'object_types'  => array( 'module'), // Post type
+
 	));
 
 	// Module background color 1

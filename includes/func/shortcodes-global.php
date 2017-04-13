@@ -4,7 +4,6 @@
 	Shortcodes for elements: buttons, seperator, gap, spacer, videos etc...
 ************************************************************************************/
 
-
 // BUTTONS
 // [button title=" " url=" " size=" " class=" "]
 function button_func( $atts ) {
@@ -18,7 +17,6 @@ function button_func( $atts ) {
 }
 add_shortcode( 'button', 'button_func' );
 
-
 // LINK
 // Use this to add grapical style to hyperlinks (add icon, and panel)
 // [link type=" "]
@@ -30,7 +28,6 @@ function list_link_func( $atts, $content = null ) {
 	return "<div class='link-panel link-{$type}'>" . $content . "</div>";
 }
 add_shortcode( 'link', 'list_link_func' );
-
 
 // YOUTUBE
 // easilly embed responsive youtube videos, just add id
@@ -44,7 +41,6 @@ function youtube_func( $atts ) {
 }
 add_shortcode( 'youtube', 'youtube_func' );
 
-
 // VIMEO
 // easilly embed responsive viemo videos, just add id
 // [vimeo id=" "]
@@ -57,7 +53,6 @@ function vimeo_func( $atts ) {
 }
 add_shortcode( 'vimeo', 'vimeo_func' );
 
-
 // LINE
 // Add a line seperator to the content
 // [line]
@@ -66,7 +61,8 @@ function line_func( $atts, $content = null ){
 }
 add_shortcode( 'line', 'line_func' );
 
-
+// Pullquote
+// Add a line seperator to the content
 //[pullquote]
 function pullquote_func( $atts, $content = null ){
 	$url = get_permalink();
@@ -74,7 +70,6 @@ function pullquote_func( $atts, $content = null ){
 	return '<blockquote class="pullquote edl-panel"><p>' . $content . '</p><a class="tweetthis" href="https://twitter.com/intent/tweet?url=' . $url . '&via=Sabre_Corp&text=' . urlencode(html_entity_decode($content)) . '" target="_blank">' . $icon . 'Share</a></blockquote>';
 }
 add_shortcode( 'pullquote', 'pullquote_func' );
-
 
 // ANCHOR
 // use this to add jump links into content
