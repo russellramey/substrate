@@ -26,14 +26,14 @@ include $base . '/shortcodes-module.php';
 /************************************************************************************
 *** Contnet functions
 ************************************************************************************/
-include $base . '/content-project.php';
-include $base . '/content-team.php';
-include $base . '/content-event.php';
 include $base . '/content-module.php';
-include $base . '/content-news.php';
-include $base . '/content-testimonial.php';
-include $base . '/content-service.php';
-include $base . '/content-casestudy.php';
+// Add your content types below
+
+
+/************************************************************************************
+*** Taxonomy functions
+************************************************************************************/
+
 
 /************************************************************************************
 *** Metabox functions
@@ -47,13 +47,7 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 }
 // Add individual metaboxes for content types above
 // Recommended
-include $base . '/metaboxes-event.php';
-include $base . '/metaboxes-team.php';
-include $base . '/metaboxes-testimonial.php';
 include $base . '/metaboxes-module.php';
-// Optional
-//include $base . '/metaboxes-casestudy.php';
-//include $base . '/metaboxes-news.php';
-//include $base . '/metaboxes-project.php';
-//include $base . '/metaboxes-service.php';
+// Add your metabox funcitons below
+
 ?>

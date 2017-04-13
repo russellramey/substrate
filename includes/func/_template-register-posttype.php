@@ -1,16 +1,17 @@
 <?php
 /************************************************************************************
-*** Team
-	Post type for 'projects'
+*** CUSTOM POST TYPES
+	Use this template to create and register new content types for wordpress.
+	Docs: https://codex.wordpress.org/Function_Reference/register_post_type
 ************************************************************************************/
-// Register News Post Type
-function news() {
-
+// Register Custom Post Type
+function custom_post_type() {
+	// Assign lables here
 	$labels = array(
-		'name'                  => _x( 'News', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'News', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'News', 'text_domain' ),
-		'name_admin_bar'        => __( 'News', 'text_domain' ),
+		'name'                  => _x( 'Post Types', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Post Type', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Post Types', 'text_domain' ),
+		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -36,29 +37,25 @@ function news() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'News', 'text_domain' ),
-		'description'           => __( 'For news items, updates, press releases, articles, etc...', 'text_domain' ),
+		'label'                 => __( 'Post Type', 'text_domain' ),
+		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', ),
-		'taxonomies'            => array( 'post_tag' ),
+		'supports'              => array( ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-megaphone',
 		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => false,
+		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => true,		
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
-		'show_in_rest'          => false,
-		'rewrite' 			  	=> array( 'with_front' => false),
 	);
-	register_post_type( 'news', $args );
+	register_post_type( 'post_type', $args );
 
 }
-add_action( 'init', 'news', 0 );
-?>
+add_action( 'init', 'custom_post_type', 0 );
