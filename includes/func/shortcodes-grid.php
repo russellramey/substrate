@@ -16,7 +16,7 @@ function section_func( $atts, $content = null ){
 		'max_width' => ''
 	), $atts ) );
 	// Return html
-	return "<div class='content-row {$class} {$width} off-ctr' style='max-width:{$max_width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
+	return "<div class='content-row {$width} {$class} off-ctr' style='max-width:{$max_width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
 }
 add_shortcode( 'section', 'section_func' );
 
