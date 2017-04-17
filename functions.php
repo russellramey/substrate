@@ -21,13 +21,11 @@ include $base . '/global-variables.php';
 ************************************************************************************/
 include $base . '/shortcodes-global.php';
 include $base . '/shortcodes-grid.php';
-include $base . '/shortcodes-module.php';
 
 /************************************************************************************
 *** Contnet functions
 ************************************************************************************/
-include $base . '/content-module.php';
-// Add your content types below
+
 
 
 /************************************************************************************
@@ -45,9 +43,6 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 } elseif ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
 }
-// Add individual metaboxes for content types above
-// Recommended
-include $base . '/metaboxes-module.php';
-// Add your metabox funcitons below
+// Add your CMB2 metabox funcitons below
 
 ?>

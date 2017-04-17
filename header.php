@@ -12,14 +12,6 @@
 
 <!-- HEADER -->
 <header class="bt-header">
-    <div class="bt-nav--utility">
-        <ul class="off-lft">
-            <li><a href="#">Utility Item</a></li>
-            <li><a href="#">Utility Item</a></li>
-            <li><a href="#">Utility Item</a></li>
-            <li><a href="#">Utility Item</a></li>
-        </ul>
-    </div>
     <div class="bt-header--main">
         <div class="bt-logo">
             <!--<img src="img/sabre-logo-slab.png" width="auto" height="auto">-->
