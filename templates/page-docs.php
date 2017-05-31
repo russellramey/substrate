@@ -1,5 +1,5 @@
 <?php
-// Template Name: Example Markup
+// Template Name: Page - Documentation
 ?>
 <?php
 // Get the header
@@ -99,6 +99,12 @@ get_header(); ?>
         <label for="comments">Comments</label>
         <textarea name="comments" placeholder="What do you have to say..."></textarea>
     </p>
+    <p>
+        <label for="checkbox"><input type="checkbox" id="checkbox" name="radio" /> Checkbox</label>
+    </p>
+    <p>
+        <label for="radio"><input type="radio" id="radio" name="radio" /> Radio</label>
+    </p>
     <p class="bt-select">
         <label for="sample">What should you choose?</label>
         <select name="sample">
@@ -114,7 +120,9 @@ get_header(); ?>
 <br />
 <h4>Buttons</h4>
 <p><input type="submit" value="Primary"/></p>
+<p><a href="#" class="button button-sml"/>Primary - small</a></p>
 <p><a class="button button-secondary">Secondary</a></p>
+<p><a class="button button-secondary button-sml">Secondary - small</a></p>
 <p><button disabled>Disabled</button></p>
 </div>
 
@@ -129,37 +137,32 @@ get_header(); ?>
             </div>
             <p><a href="#" class="bt-expand--action button button-sml button-light">View more +</a></p>
         </div>
-        <div class="bt-expand">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibus, condimentum est vel, pellentesque urna. Morbi suscipit consectetur sem. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam.</p>
-            <div class="bt-expand--content">
-                <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
-            </div>
-            <p><a href="#" class="bt-expand--action">View more +</a></p>
-        </div>
+        <Br />
 <h4>Expand & Collapse List</h4>
 <ul class="bt-expand--list">
     <li class="bt-expand--list-item">
         <div class="bt-expand--list-action">
-            <p><b>Sabre AirVision 5-year Vision</b></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</p>
         </div>
         <div class="bt-expand--list-content" style="display: none;">
-            <p>Welcome the customer community, share how AirVision delivered in 2016, and where we’re heading in 2017. Participate in engaging conversation about new opportunities, product areas, and our five year vision.</p>
+            <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
         </div>
     </li>
     <li class="bt-expand--list-item">
         <div class="bt-expand--list-action">
-            <p><b>Integrated Schedule Management</b></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</p>
         </div>
         <div class="bt-expand--list-content" style="display: none;">
-            <p>In this joint session with operations leaders, explore how technology can help remove silos in schedule management between different planning and operational departments. Join us for a discussion on requirements for this alignment and the opportunities it creates for higher profitability and more efficient operations.</p>
+            <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+            <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
         </div>
     </li>
     <li class="bt-expand--list-item">
         <div class="bt-expand--list-action">
-            <p><b>Pricing &amp; Revenue Management Evolution: Powering A Smarter Airline</b></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</p>
         </div>
         <div class="bt-expand--list-content">
-            <p>Join us as we discuss how an evolved airline pricing &amp; retail offering plays a key role in Sabre’s overall commercial platform vision. Discover Sabre’s expanded Total Revenue Optimization Suite and be part of the conversation as we discuss a new approach to accelerating the pricing and revenue management space at your airline.</p>
+            <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
         </div>
     </li>
 </ul>
@@ -208,21 +211,20 @@ get_header(); ?>
                     <li><a href="#">Tab Two</a></li>
                     <li><a href="#">Tab Three</a></li>
                 </ul>
-                <br />
                 <ul class="bt-tab--panels">
-                    <li class="active">
+                    <li class="bt-panel active">
                         <div class="bt-panel--content">
                             <h4>Tab 1</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
                         </div>
                     </li>
-                    <li class="">
+                    <li class="bt-panel">
                         <div class="bt-panel--content">
                             <h4>Tab 2</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
                         </div>
                     </li>
-                    <li class="">
+                    <li class="bt-panel">
                         <div class="bt-panel--content">
                             <h4>Tab 3</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
@@ -237,6 +239,7 @@ get_header(); ?>
 
 
 <h4>Tables</h4>
+<div class="bt-table--wrapper">
 <table class="bt-table">
     <th>
         Day
@@ -269,6 +272,7 @@ get_header(); ?>
         </td>
     </tr>
 </table>
+</div>
 
 <br />
 <br />
@@ -276,99 +280,11 @@ get_header(); ?>
 
 
 <h4>Grid</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in bibendum enim. Fusce ornare porttitor justo, non lacinia eros dictum a. Vestibulum pretium lectus sapien, vel auctor turpis laoreet a. Nunc feugiat nibh sit amet massa faucibus rhoncus. Curabitur ac molestie justo. Donec ut arcu vitae orci posuere dictum eu tempus leo. </p>
-    <div class="row">
-        <div class="col-sm-1">
-            <p>.col-*-1</p>
-        </div>
-        <div class="col-sm-11">
-            <p>.col-*-11</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-            <p>.col-*-2</p>
-        </div>
-        <div class="col-sm-10">
-            <p>.col-*-10</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-9">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-8">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-5">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-6">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-6">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-7">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-5">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-8">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-4">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-9">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-3">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-2">
-            <p>.col-*-9</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-11">
-            <p>.col-*-3</p>
-        </div>
-        <div class="col-sm-1">
-            <p>.col-*-9</p>
-        </div>
-    </div>
+<p>This theme includes a powerful mobile-first <a href="https://getbootstrap.com/css/#grid" target="_blank">Bootstrap</a> grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each media query range.</p>
+
 </div>
-                </div>
-            </section>
-        </article>
+</section>
+</article>
 
     <?php
     // End WP Loop

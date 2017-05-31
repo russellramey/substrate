@@ -14,8 +14,7 @@
 <header class="bt-header">
     <div class="bt-header--main">
         <div class="bt-logo">
-            <!--<img src="img/sabre-logo-slab.png" width="auto" height="auto">-->
-            <span class="bt-tagline">Site Name</span>
+
         </div>
         <div class="bt-nav--main">
             <?php

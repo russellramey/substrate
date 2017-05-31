@@ -338,6 +338,10 @@ a.button-sml{
 /**************************************************************
 INPUTS
 **************************************************************/
+label{
+	display: block;
+	margin-bottom:5px;
+}
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -374,6 +378,7 @@ input[type="password"],
 input[type="tel"],
 select {
 	min-height: 50px;
+	max-height: 50px;
 }
 textarea {
 	min-height:150px;
@@ -391,7 +396,8 @@ select:hover {
 	-moz-box-shadow: 0 0 5px #ccc;
 }
 select{
-	cursor:pointer;
+	cursor: pointer;
+	padding: 12px 15px;
 }
 .bt-select{
 	position: relative;
@@ -406,6 +412,11 @@ select{
 	right: 15px;
 	top: 50%;
 	pointer-events: none;
+}
+input[type="checkbox"],
+input[type="radio"]{
+	position: relative;
+	top:-1px;
 }
 /**************************************************************
 EMBEDS
@@ -2766,7 +2777,6 @@ Docs: http://fontawesome.io/icons/
   clip: auto;
 }
 
-
 /**************************************************************
 BOOTSTRAP GRID
 **************************************************************/
@@ -3478,9 +3488,8 @@ BOOTSTRAP GRID
   position: fixed;
 }
 
-
 /*************************************************************************************
-EDL ELEMENTS
+BASE THEME ELEMENTS
 
 GLOBAL
 *************************************************************************************/
@@ -3521,15 +3530,6 @@ HEADERS
     display: block;
     position: relative;
     z-index: 1;
-}
-
-/* Tagline */
-span.bt-tagline{
-	font-size: 21px;
-	line-height: 60px;
-    font-weight: bold;
-	float: left;
-	margin-right: 20px;
 }
 
 /*Header on scroll*/
@@ -3825,27 +3825,55 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 .bt-tab ul.bt-tab--panels li.active {
     display: block;
 }
+
+/*************************************************************************************
+PANELS
+*************************************************************************************/
+.bt-panel{
+    padding: 20px;
+    border:1px solid #e4e4e4;
+    border-radius: 4px;
+    margin-bottom:30px;
+    overflow: hidden;
+	background: #fff;
+}
+.bt-panel--nm{
+	margin-bottom: 0;
+}
 /*************************************************************************************
 TABLES
 *************************************************************************************/
+.bt-table--wrapper{
+	width: 100%;
+	position: relative;
+	overflow-y:scroll;
+}
 .bt-table{
-	border: 1px solid #e4e4e4;
     border-collapse: collapse;
     border-spacing: 0;
     margin: 0 0 20px;
     width: 100%;
+	min-width: 640px;
+	position: relative;
+	overflow-y:scroll;
 }
 .bt-table td{
 	border-top: 1px solid #e4e4e4;
 	border-right: 1px solid #e4e4e4;
+	border-bottom:1px solid #e4e4e4;
+	border-left:1px solid #e4e4e4;
+	margin-left:-1px;
+	margin-top: -1px;
     padding: 6px 20px 6px 20px;
     min-width: 100px;
+	background: #fff;
 }
 .bt-table th{
-	background: #eee;
+	background: #333;
+	color:#fff !important;
 	padding: 10px 20px;
 	text-align: left;
-	font-weight: bold;
+	border:1px solid #222;
 }
 .bt-table th h1,
 .bt-table th h2,
@@ -3855,6 +3883,11 @@ TABLES
 .bt-table th h6{
 	margin: 0;
 	color: #fff;
+}
+@media screen and (max-width:640px){
+	.bt-table{
+		font-size: 15px;
+	}
 }
 /*************************************************************************************
 FOOTER
@@ -3886,7 +3919,6 @@ FOOTER
 .bt-footer .bt-nav--footer ul li a:hover{
 	color:#999;
 }
-
 /* Footer Responsivness */
 @media screen and (max-width:740px){
     .bt-footer{

@@ -21,7 +21,7 @@ function theme_settings_page() {
     if ( ! isset( $_REQUEST['settings-updated'] ) )
         $_REQUEST['settings-updated'] = false;
     ?>
-    <div id="theme-options">
+    <div id="theme-options" style="margin-right:20px;">
         <h1><?php _e( 'Global Options' ) //your admin panel title ?></h1>
         <br />
         <?php
@@ -82,6 +82,17 @@ function theme_settings_page() {
                     <div class="option-item">
                     	<textarea id="theme_settings[ga_code]" rows="10" cols="100" name="theme_settings[ga_code]" value=""><?php esc_attr_e($options['ga_code']); ?></textarea>
                     	<p><span style="font-size:12px; font-style:italic;">Add your Google Analytics code here. You can get this code from your Google account.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section postbox">
+                <div class="inside">
+                    <h2 class="hndle ui-sortable-handle"><span>Footer/Copyright</span></h2>
+                    <br />
+                    <div class="option-item">
+                    	<textarea id="theme_settings[copyright]" rows="10" cols="100" name="theme_settings[copyright]" value=""><?php esc_attr_e($options['copyright']); ?></textarea>
+                    	<p><span style="font-size:12px; font-style:italic;">Change the copyright text in the footer of theme, if blank default format will be used.</span></p>
                     </div>
                 </div>
             </div>
