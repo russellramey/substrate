@@ -60,27 +60,4 @@ function shortcode_empty_paragraph_fix( $content ) {
 // Add Editor styles to dashboard
 add_editor_style( array( 'assets/css/editor.css' ) );
 
-// Remove admin links
-function substrate_remove_menus () {
-	// Comments
-	remove_menu_page('edit-comments.php');
-
-	global $submenu;
-	// Appearance Menu
-	unset($submenu['themes.php'][6]); // Customize
-}
-add_action('admin_menu', 'substrate_remove_menus');
-
-// Remove admin bar links
-function remove_admin_bar_links() {
-    global $wp_admin_bar;
-    $wp_admin_bar->remove_menu('about');            // Remove the about WordPress link
-    $wp_admin_bar->remove_menu('support-forums');   // Remove the support forums link
-    $wp_admin_bar->remove_menu('comments');         // Remove the comments link
-    $wp_admin_bar->remove_menu('customize');      // Remove the content link
-}
-add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
-
-
-
 ?>
