@@ -6,10 +6,10 @@ get_header(); ?>
     <div class="entry-header">
         <h1 class="entry-title">
             <?php
-                if ( is_day() ) { printf( __( 'Daily Archives: %s', 'devmod' ), get_the_time( get_option( 'date_format' ) ) ); }
-                elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'devmod' ), get_the_time( 'F Y' ) ); }
-                elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'devmod' ), get_the_time( 'Y' ) ); }
-                else { _e( 'Archives', 'devmod' ); }
+                if ( is_day() ) { printf( __( 'Daily Archives: %s', 'substrate' ), get_the_time( get_option( 'date_format' ) ) ); }
+                elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'substrate' ), get_the_time( 'F Y' ) ); }
+                elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'substrate' ), get_the_time( 'Y' ) ); }
+                else { _e( 'Archives', 'substrate' ); }
             ?>
         </h1>
     </div>

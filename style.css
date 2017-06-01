@@ -3,18 +3,16 @@
 	  Change any options below, these are simply the default
 ************************************************************************************/
 /*
-Theme Name: Devmod
-Theme URI: http://wordpress.org/themes/devmod
+Theme Name: Substrate
+Theme URI: http://russellramey.me/substrate
 Author: Russell Ramey
-Author URI: http://russellramey.me/devmod
-Description: Basic starter theme for the developer in mind. Built with HTML5, CSS3, JS,
-and Bootstrap Grid. Modular code, files, and filesystem. Simply uncomment lines of code
-to add functionality quickly and easily.
+Author URI: http://russellramey.me/
+Description: Basic starter theme for the developer in mind. Built with HTML5, CSS3, JS, and Bootstrap Grid. Use this theme as a basis to build your wordpress site upon. See more information about this theme on the github repo.
 
 Version: 1.0.0
 
-Devmod WordPress Theme © 2017 Russell Ramey
-Devmod is distributed under the terms of the GNU GPL
+Substrate WordPress Theme © 2017 Russell Ramey
+Substrate is distributed under the terms of the GNU GPL
 */
 /************************************************************************************
 *** THEME RESET and BASE and COMPENENTS
@@ -35,11 +33,6 @@ Devmod is distributed under the terms of the GNU GPL
 *** WORDPRESS STYLES
 	  Default wordpress styles for WP generated classes
 ************************************************************************************/
-/* Preformatted text
-   - used as comments for editor so hide on front end */
-pre{
-    display: none;
-}
 /* Alignment
    - Default wordpress alignment for visual editor */
 .alignleft{

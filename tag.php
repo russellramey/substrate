@@ -4,7 +4,7 @@ get_header(); ?>
 
 <section id="content" role="main">
     <div class="header">
-        <h1 class="entry-title"><?php _e( 'Archives: ', 'devmod' ); ?><?php single_tag_title(); ?></h1>
+        <h1 class="entry-title"><?php _e( 'Archives: ', 'substrate' ); ?><?php single_tag_title(); ?></h1>
     </div>
 
     <?php

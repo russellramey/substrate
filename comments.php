@@ -33,9 +33,9 @@
         ?>
 
         <section id="trackbacks-list" class="comments">
-            <h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'devmod' ) : __( 'Trackback', 'devmod' ) ); ?></h3>
+            <h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'substrate' ) : __( 'Trackback', 'substrate' ) ); ?></h3>
             <ul>
-                <?php wp_list_comments( 'type=pings&callback=devmod_custom_pings' ); ?>
+                <?php wp_list_comments( 'type=pings&callback=substrate_custom_pings' ); ?>
             </ul>
         </section>
 

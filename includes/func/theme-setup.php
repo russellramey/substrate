@@ -4,9 +4,9 @@
 	Thumbnails, navigation menus, theme support, etc...
 ************************************************************************************/
 // Setup function
-function devmod_setup() {
+function substrate_setup() {
     // Theme language support
-	load_theme_textdomain( 'devmod', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'substrate', get_template_directory() . '/languages' );
     // Add title tag support
 	add_theme_support( 'title-tag' );
     // Feed support
@@ -21,15 +21,15 @@ function devmod_setup() {
 		register_nav_menus(
 		    array(
                 // Main Menu
-                'main-menu' => __( 'Main Menu', 'devmod' ),
+                'main-menu' => __( 'Main Menu', 'substrate' ),
                 // Secondary Menu (remove if not needed, or customize to your needs)
-                'second-menu' => __( 'Secondary Menu', 'devmod'),
+                'second-menu' => __( 'Secondary Menu', 'substrate'),
                 // Add other menus as needed
             )
 	    );
 }
 // Add setup to theme
-add_action( 'after_setup_theme', 'devmod_setup' );
+add_action( 'after_setup_theme', 'substrate_setup' );
 
 // WP Title
 add_filter( 'the_title', 'blankslate_title' );
@@ -61,7 +61,7 @@ function shortcode_empty_paragraph_fix( $content ) {
 add_editor_style( array( 'assets/css/editor.css' ) );
 
 // Remove admin links
-function devmod_remove_menus () {
+function substrate_remove_menus () {
 	// Comments
 	remove_menu_page('edit-comments.php');
 
@@ -69,7 +69,7 @@ function devmod_remove_menus () {
 	// Appearance Menu
 	unset($submenu['themes.php'][6]); // Customize
 }
-add_action('admin_menu', 'devmod_remove_menus');
+add_action('admin_menu', 'substrate_remove_menus');
 
 // Remove admin bar links
 function remove_admin_bar_links() {
