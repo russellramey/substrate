@@ -86,7 +86,7 @@ get_header(); ?>
 </div>
 
 <div class="bt-section">
-<h3>Form elements</h3>
+<h3>Input elements</h3>
 <form class="bt-form--default">
     <p>
         <label for="name">Full name</label>
@@ -115,6 +115,37 @@ get_header(); ?>
         </select>
     </p>
 </form>
+<br />
+<h4>Inputs - In Field Labels</h4>
+<form class="bt-form">
+    <p>
+        <label class="bt-label" for="name">Full name</label>
+        <input type="text" name="name" value="" />
+    </p>
+    <p>
+        <label class="bt-label" for="email">Email address</label>
+        <input type="email" name="email" />
+    </p>
+    <p>
+        <label class="bt-label" for="comments">Comments</label>
+        <textarea name="comments"></textarea>
+    </p>
+    <p>
+        <label for="checkbox2"><input type="checkbox" id="checkbox2" name="radio2" /> Checkbox</label>
+    </p>
+    <p>
+        <label for="radio2"><input type="radio" id="radio2" name="radio2" /> Radio</label>
+    </p>
+    <p class="bt-select">
+        <label class="bt-label" for="sample">What should you choose?</label>
+        <select name="sample">
+            <option selected="selected" disabled="disabled"></option>
+            <option>This is the first option</option>
+            <option>This is the second option and far longer</option>
+            <option>This is the third option</option>
+        </select>
+    </p>
+</form>
 
 <br />
 <br />
@@ -124,6 +155,29 @@ get_header(); ?>
 <p><a class="button button-secondary">Secondary</a></p>
 <p><a class="button button-secondary button-sml">Secondary - small</a></p>
 <p><button disabled>Disabled</button></p>
+</div>
+
+<div class="bt-section">
+    <div class="inner">
+    <h3>Messages</h3>
+    <h4>Success</h4>
+    <div class="bt-message bt-message--success">
+        <i class="fa fa-check bt-message--icon"></i>
+        <p><span>Successful message!</span> You have submitted an entry.</p>
+    </div>
+
+    <h4>Warning</h4>
+    <div class="bt-message bt-message--warning">
+        <i class="fa fa-exclamation-triangle bt-message--icon"></i>
+        <p><span>Warning message!</span> Are you sure you want to continue?</p>
+    </div>
+
+    <h4>Error</h4>
+    <div class="bt-message bt-message--error">
+        <i class="fa fa-times bt-message--icon"></i>
+        <p><span>Error message!</span> You have not saved your session.</p>
+    </div>
+    </div>
 </div>
 
 <div class="bt-section">

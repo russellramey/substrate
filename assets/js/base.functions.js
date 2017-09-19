@@ -1,7 +1,7 @@
 // BASE JS FUNCTIONS
 jQuery( document ).ready(function($) {
 // Hide Header on on scroll down
-$.fn.edl_headerScroll = function(){
+$.fn.bt_headerScroll = function(){
     // Variables
     var $this = $(this);
     var didScroll;
@@ -36,33 +36,8 @@ $.fn.edl_headerScroll = function(){
         lastScrollTop = st;
     }
 };
-
-// ANIMATE UTILITY NAV
-$.fn.edl_utility = function(){
-    $(document).scroll(function() {
-        if ($(document).scrollTop() > 300) {
-    		$('.bt-header').addClass('hide-utility');
-            $('.bt-nav--utility-spacer').hide();
-        } else {
-        	$('.bt-header').removeClass('hide-utility');
-            $('.bt-nav--utility-spacer').show();
-        }
-    });
-};
-// Mega Navigation
-$.fn.edl_meganav = function(){
-    $(this).click(function() {
-        $('.bt-nav--mega').toggleClass('show-mega');
-        $('body').toggleClass('noscroll');
-        return false;
-    });
-    $('.bt-nav--mega a').click(function(){
-        $('.bt-nav--mega').removeClass('show-mega');
-        $('body').removeClass('noscroll');
-    });
-};
 // Accordion
-$.fn.edl_accordion = function(){
+$.fn.bt_accordion = function(){
     // Set your action element
     var action = $('.bt-accordion--action');
     // Set you hidden content element
@@ -70,19 +45,21 @@ $.fn.edl_accordion = function(){
     $(action).click(function(){
         if (!$(this).hasClass('active')){
             $(action).removeClass('active');
-            $(moredetails).slideUp(150).removeClass('active');
+            $(this).parent().parent().find(moredetails).slideUp(150).removeClass('active');
             $(this).parent().find(moredetails).slideDown(150).addClass('active');
             $(this).addClass('active');
         } else {
             $(action).removeClass('active');
-            $(moredetails).slideUp(150).removeClass('active');
+            $(this).parent().parent().find(moredetails).slideUp(150).removeClass('active');
         }
         return false;
     });
 };
 // Expand & Collapes
-$.fn.edl_expand = function(){
-    $(this).click(function(){
+$.fn.bt_expand = function(){
+    // Set your action element
+    var action = $('.bt-expand--action');
+    $(action).click(function(){
         var moredetails = $(this).parent().parent().children('.bt-expand--content');
         var viewmore = $(this);
         var txt = moredetails.is(':visible') ? 'View more +' : 'View less -';
@@ -92,8 +69,10 @@ $.fn.edl_expand = function(){
     });
 };
 // Expand & Collapes list
-$.fn.edl_expand_list = function(){
-    $(this).click(function(){
+$.fn.bt_expand_list = function(){
+    // Set your action element
+    var action = $('.bt-expand--list-action');
+    $(action).click(function(){
         var moredetails = $(this).parent().children('.bt-expand--list-content');
         var viewmore = $(this);
         $(this).parent().find(moredetails).slideToggle(150);
@@ -102,7 +81,7 @@ $.fn.edl_expand_list = function(){
     });
 };
 // Tabs
-$.fn.edl_tabs = function (){
+$.fn.bt_tabs = function (){
     var $this = $(this);
     $(".bt-tab--nav li").click(function(e){
         if (!$(this).hasClass("active")) {
@@ -116,11 +95,36 @@ $.fn.edl_tabs = function (){
     return false;
     });
 };
-// Notices
-$.fn.edl_notice = function (){
-    $(this).click(function(){
-        $('.bt-notice').hide();
-        return false;
+// Form Infield Labels
+$.fn.bt_form_labels = function (){
+
+    // Find inputs
+    var inputs = $(this).find('input, textarea, select');
+
+    // Find labels
+    var labels = $(this).find('label.bt-label');
+        $(labels).parent().css('position', 'relative');
+
+    // Set active class
+    var active = "has-value";
+
+    // For each input
+    $(inputs).each(function(){
+        // On focus
+        $(this).focus(function() {
+            if(!$(this).val()) {
+                $(this).parent().find(labels).addClass(active);
+            }
+        });
+
+        // On blur
+        $(this).blur(function() {
+            if($(this).val()) {
+                $(this).parent().find(labels).addClass(active);
+            } else {
+                $(this).parent().find(labels).removeClass(active);
+            }
+        });
     });
 };
 });
