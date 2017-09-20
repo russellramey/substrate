@@ -58,6 +58,10 @@ get_header(); ?>
 
     <br />
     <br />
+    <h4>Blockquote</h4>
+    <blockquote><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>
+    <br />
+    <br />
     <h4>Lists</h4>
     <p>Ordered List</p>
     <ol>
