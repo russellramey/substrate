@@ -1,0 +1,563 @@
+/*************************************************************************************
+BASE THEME ELEMENTS
+
+GLOBAL
+*************************************************************************************/
+.bt-content{
+    position: relative;
+    padding-top: 120px;
+    overflow: hidden;
+}
+.bt-section{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+/*************************************************************************************
+HEADERS
+********************************************************f*****************************/
+.bt-header{
+    position: static;
+    top: 0px;
+    left:0;
+    width: 100%;
+    z-index: 99;
+    transition: top 300ms ease;
+    -webkit-transition: top 300ms ease;
+    -moz-transition: top 300ms ease;
+    -o-transition: top 300ms ease;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.bt-header--main{
+    height: 60px;
+    position: relative;
+  padding: 0 15px;
+}
+.bt-header .bt-logo img{
+  height: 60px;
+  width: auto;
+  float: left;
+  margin-right: 10px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/*Header on scroll*/
+.bt-header.hide-utility{
+    top:-34px;
+}
+.bt-header.nav-up{
+    top:-120px;
+}
+
+/* Brand / Logo */
+.bt-logo{
+    float: left;
+    font-family: 'bitter', helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: #3073A2;
+    font-size: 18px;
+}
+.bt-logo span{
+    line-height: 60px;
+}
+.bt-logo img{
+    max-width: 60px;
+    margin-top: 3px;
+    margin-right: 5px !important;
+}
+@media screen and (max-width:960px){
+    .bt-logo img{
+        height: auto !important;
+    }
+    .bt-header{
+        position: fixed;
+    }
+    .wrapper{
+        padding-top: 60px;
+    }
+}
+
+/*************************************************************************************
+NAVIGATION
+*************************************************************************************/
+/* Main Navigation */
+.bt-nav--main,
+.bt-nav--main ul{
+    text-align: center;
+    float: left;
+    margin: 0;
+    list-style: none;
+}
+.bt-nav--main ul li{
+    display: inline-block;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.bt-nav--main:hover ul li{
+    opacity: .4;
+}
+.bt-nav--main ul li a{
+    line-height: 60px;
+    max-height: 60px;
+    padding: 0 15px;
+    display: block;
+    border:0;
+}
+.bt-nav--main ul li:hover{
+    opacity: 1 !important;
+}
+
+/* Dropdown/Sub Navigation */
+.bt-nav--main ul li ul.bt-nav--sub,
+.bt-nav--main ul li ul.sub-menu{
+    position: absolute;
+    white-space: nowrap;
+    left:0;
+    top: 90%;
+    min-width: 220px;
+    text-align: left;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    border:1px solid #eee;
+    background: #fff;
+}
+.bt-nav--main ul.bt-nav--sub li,
+.bt-nav--main ul.sub-menu li{
+    opacity: 1;
+    display: block;
+    float: none;
+    border:0;
+}
+.bt-nav--main ul.bt-nav--sub li a,
+.bt-nav--main ul.sub-menu li a{
+    line-height: 1.4em;
+    padding-top:6px;
+    padding-bottom:8px;
+    display: block;
+    text-transform: capitalize;
+}
+.bt-nav--main ul.bt-nav--sub li a:hover{
+
+}
+.bt-nav--main ul li:hover ul.bt-nav--sub,
+.bt-nav--main ul li:hover ul.sub-menu{
+    display: block;
+}
+
+/* Breadcrumbs */
+.bt-breadcrumbs,
+.bt-breadcrumbs a{
+    color: #999;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.bt-breadcrumbs a:hover{
+    color:#3399CC;
+}
+
+/* Hamburger */
+.bt-hamburger{
+    display: none;
+    font-size: 28px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+/* Nav Responsiveness */
+@media screen and (max-width:960px){
+    .bt-nav--main{
+        position: fixed;
+        width: 100%;
+        bottom:0;
+        top: 0px;
+        padding-top: 40px;
+        height: 100%;
+        z-index: 999;
+        right: -100%;
+        width: 100%;
+		float: none;
+		overflow: auto;
+		transition: right 150ms ease-in-out;
+		-webkit-transition: right 150ms ease-in-out;
+		-moz-transition: right 150ms ease-in-out;
+		-ms-transition: right 150ms ease-in-out;
+		-o-transition: right 150ms ease-in-out;
+        background: #fff;
+    }
+	.bt-hamburger{
+		display: block;
+	}
+	.bt-nav--main ul{
+		float: none;
+	}
+    .current-menu-item > a{
+        font-weight: normal;
+    }
+    .current-menu-item a:after{
+        background: none !important;
+    }
+    .bt-nav--main ul li{
+        display: block;
+        text-align: left;
+        float: none;
+		border-bottom:1px solid #f4f4f4;
+        position: relative;
+    }
+    .bt-nav--main ul li a{
+        line-height: 50px;
+    }
+    .bt-nav--main ul.menu > li a:after{
+        display: none;
+    }
+    /* Dropdown/Sub Navigation */
+    .bt-nav--main ul li ul.bt-nav--sub,
+    .bt-nav--main ul li ul.sub-menu{
+        display: block;
+        position: static;
+        padding: 0px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0 !important;
+        padding-left: 15px;
+    }
+}
+/*************************************************************************************
+PANEL
+*************************************************************************************/
+.bt-panel{
+    padding: 20px;
+    border:1px solid #e4e4e4;
+    border-radius: 4px;
+    margin-bottom:30px;
+    overflow: hidden;
+	background: #fff;
+}
+.bt-panel img{
+    border-radius: 4px;
+}
+.bt-panel img.bt-panel--thumb{
+    margin-top: -20px;
+    margin-left:-20px;
+    margin-right:-20px;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+.bt-panel--meta{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999;
+    position: relative;
+    top:4px;
+}
+.bt-panel--meta a:after{
+    content:'\2022';
+    display: inline-block;
+    margin: 0 3px 0 5px;
+    color: #999;
+}
+.bt-panel--meta a{
+    color: #999;
+}
+.bt-panel--meta a:hover{
+    color:#79CAF2;
+}
+/*************************************************************************************
+EXPAND/COLLAPSE & ACCORDION & TABS
+*************************************************************************************/
+/* Expand & Collapse */
+.bt-expand{
+    margin-bottom:30px;
+}
+.bt-expand .bt-expand--content{
+    display: none;
+}
+.bt-expand .bt-expand--content p{
+    margin: 0;
+  padding-bottom: 5px;
+}
+
+/* Expand & Collapse List */
+.bt-expand--list{
+    width: 100%;
+    margin:0;
+    list-style: none;
+    margin-bottom:20px;
+}
+.bt-expand--list-action{
+    position: relative;
+    cursor: pointer;
+}
+.bt-expand--list-action.no-action{
+    pointer-events: none;
+}
+.bt-expand--list-action.no-action:after{
+    content: '';
+}
+.bt-expand--list-action p{
+    margin: 0;
+  font-weight: bold;
+    padding: 10px 20px 10px 0px;
+}
+.bt-expand--list-action:after{
+    content: '\f078';
+    font-family: "FontAwesome" !important;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  font-size: 14px;
+}
+.bt-expand--list-action.active:after{
+    content: '\f077';
+}
+.bt-expand--list-content{
+    display: none;
+    padding:0 0px;
+}
+.bt-expand--list-content p{
+    margin:0;
+    padding:10px 0 30px;
+}
+
+/* Accordion */
+.bt-accordion--item{
+    margin-top:-1px;
+}
+
+.bt-accordion--action p,
+.bt-accordion--action h1,
+.bt-accordion--action h2,
+.bt-accordion--action h3,
+.bt-accordion--action h4,
+.bt-accordion--action h5,
+.bt-accordion--action h6{
+    margin: 0;
+    padding: 0;
+}
+.bt-accordion .bt-accordion--action{
+    padding:15px 40px 15px 20px;
+    position: relative;
+    cursor:pointer;
+  font-weight: bold;
+}
+.bt-accordion .bt-accordion--item:nth-child(even) .bt-accordion--action{
+  background: #f4f4f4;
+}
+.bt-accordion .bt-accordion--content{
+    display: none;
+    border-bottom:1px solid #eee;
+    padding:0 20px 20px 20px;
+}
+.bt-accordion .bt-accordion--action:after{
+  content: '\f078';
+    font-family: "FontAwesome" !important;
+    display: block;
+    position: absolute;
+  font-size: 14px;
+    right: 10px;
+    top: 50%;
+    margin-top: -12px;
+}
+.bt-accordion .bt-accordion--action.active:after{
+    content: '\f077';
+}
+
+/* Tabs */
+.bt-tab ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.bt-tab ul.bt-tab--nav{
+    padding:0 15px;
+}
+.bt-tab ul.bt-tab--nav  li{
+    display: inline;
+    float: left;
+    margin-right:-1px;
+    margin-bottom:-1px;
+}
+.bt-tab ul.bt-tab--nav li{
+    border:1px solid #e4e4e4;
+    display: block;
+    background:#f4f4f4;
+    border-radius: 6px 6px 0 0;
+
+}
+.bt-tab ul.bt-tab--nav li.active{
+    background: #fff;
+    border-bottom:1px solid #fff;
+    border-right:3px solid #e4e4e4;
+}
+.bt-tab ul.bt-tab--nav a{
+    display: block;
+    padding:10px 25px;
+    color: #333;
+    border: none;
+}
+.bt-tab ul.bt-tab--panels li {
+    display: none;
+  border:none;
+  border-top: 1px solid #e4e4e4;
+}
+.bt-tab ul.bt-tab--panels li.active {
+    display: block;
+}
+
+/*************************************************************************************
+PANELS
+*************************************************************************************/
+.bt-panel{
+    padding: 20px;
+    border:1px solid #e4e4e4;
+    border-radius: 4px;
+    margin-bottom:30px;
+    overflow: hidden;
+  background: #fff;
+}
+.bt-panel--nm{
+  margin-bottom: 0;
+}
+/*************************************************************************************
+TABLES
+*************************************************************************************/
+.bt-table--wrapper{
+  width: 100%;
+  position: relative;
+  overflow-y:scroll;
+}
+.bt-table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 20px;
+    width: 100%;
+  min-width: 640px;
+  position: relative;
+  overflow-y:scroll;
+}
+.bt-table td{
+  border-top: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  border-bottom:1px solid #e4e4e4;
+  border-left:1px solid #e4e4e4;
+  margin-left:-1px;
+  margin-top: -1px;
+    padding: 6px 20px 6px 20px;
+    min-width: 100px;
+  background: #fff;
+}
+.bt-table th{
+  background: #333;
+  color:#fff !important;
+  padding: 10px 20px;
+  text-align: left;
+  border:1px solid #222;
+}
+.bt-table th h1,
+.bt-table th h2,
+.bt-table th h3,
+.bt-table th h4,
+.bt-table th h5,
+.bt-table th h6{
+  margin: 0;
+  color: #fff;
+}
+@media screen and (max-width:640px){
+  .bt-table{
+    font-size: 15px;
+  }
+}
+/*************************************************************************************
+MESSAGES & NOTIFICATIONS
+*************************************************************************************/
+.bt-message{
+    padding: 20px 30px;
+    border-radius: 3px;
+    margin-bottom:30px;
+    background: #fff;
+    overflow: hidden;
+  color: #fff;
+}
+.bt-message p{
+    margin: 0;
+    float: left;
+    margin-left: 20px;
+}
+.bt-message i{
+  float: left;
+}
+.bt-message .bt-message--icon:before{
+    font-size: 22px;
+    float: left;
+}
+.bt-message.bt-message--success{
+    background: #2ecc71;
+}
+.bt-message.bt-message--warning{
+    background: #f1c40f;
+}
+.bt-message.bt-message--error{
+    background: #e74c3c;
+}
+
+/*************************************************************************************
+FOOTER
+*************************************************************************************/
+.bt-footer{
+  padding:15px;
+  border-top: 1px solid #eee;
+}
+.bt-footer .bt-nav--footer,
+.bt-footer .bt-footer-logo{
+  float: left;
+}
+.bt-footer ul{
+    margin: 0;
+}
+.bt-footer .bt-nav--footer ul li{
+  display: inline;
+  line-height: 65px;
+  padding:0 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.bt-footer .bt-nav--footer ul li a{
+  color: #f4f4f4;
+  text-decoration: none;
+    border:none;
+}
+.bt-footer .bt-nav--footer ul li a:hover{
+  color:#999;
+}
+/* Footer Responsivness */
+@media screen and (max-width:740px){
+    .bt-footer{
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom:30px;
+        padding-left:0;
+        padding-right:0;
+    }
+    .bt-footer .bt-nav--footer ul li{
+        display: block;
+        line-height: 2em;
+    }
+    .bt-footer .bt-nav--footer,
+    .bt-footer .bt-footer-logo{
+      float: none;
+    }
+    .bt-footer .bt-footer-logo img{
+        display: inline;
+    }
+
+}

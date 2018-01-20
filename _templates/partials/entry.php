@@ -1,3 +1,9 @@
+<?php
+// Global Variables
+global $partial;
+?>
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); //WP Post Classes ?>>
     <header class="entry-header">
         <?php edit_post_link(); //WP Edit Post Link ?>
@@ -15,20 +21,21 @@
         // If not search
         if ( !is_search() ) {
             // If not search show entry meta
-            get_template_part( 'templates/partials/entry-meta' );
+            get_template_part( $partial . '/entry-meta' );
         } ?>
     </header>
 
     <?php
     // Get content
     if(is_archive() || is_search() || !is_single() ) {
-        get_template_part( 'templates/partials/entry-summary');
+        get_template_part( $partial . '/entry-summary');
     } else {
-        get_template_part( 'templates/partials/entry-content');
+        get_template_part( $partial . '/entry-content');
     } ?>
+    
 
     <?php if ( is_single() ) {
         // Add footer for search results
-        get_template_part( 'templates/partials/entry-footer' );
+        get_template_part( $partial . '/entry-footer' );
     } ?>
 </article>
