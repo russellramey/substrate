@@ -20,7 +20,7 @@ include $base . '/theme-scripts.php';
 include $base . '/theme-widgets.php';
 include $base . '/theme-comments.php';
 // Theme options
-include $base . '/global-options.php';
+include $base . '/theme-options.php';
 
 /************************************************************************************
 *** Shortcodes functions

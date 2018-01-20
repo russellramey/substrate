@@ -36,12 +36,12 @@ function theme_settings_page() {
                 global $options;
             ?>
 
-            <!-- Social Icons -->
+            <!-- Social Profiles -->
             <div class="section postbox">
                 <div class="inside">
                     <h2 class="hndle ui-sortable-handle"><span>Social Profiles</span></h2>
                     <div class="option-item">
-                    	<p><b><?php _e( 'Twiiter' ); ?></b></p>
+                    	<p><b><?php _e( 'Twitter' ); ?></b></p>
                     	<p><input id="theme_settings[twitterurl]" type="text" size="36" name="theme_settings[twitterurl]" value="<?php esc_attr_e( $options['twitterurl'] ); ?>" /><br/>
                     	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Twitter profile' ); ?></span></p>
                     </div>
@@ -56,9 +56,14 @@ function theme_settings_page() {
                     <div class="option-item">
                     	<p><b><?php _e( 'YouTube' ); ?></b></p>
                     	<p><input id="theme_settings[youtubeurl]" type="text" size="36" name="theme_settings[youtubeurl]" value="<?php esc_attr_e( $options['youtubeurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to YouTube channel' ); ?></span></p>
+                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to YouTube channel/profile' ); ?></span></p>
                     </div>
 
+                    <div class="option-item">
+                        <p><b><?php _e( 'Vimeo' ); ?></b></p>
+                        <p><input id="theme_settings[vimeourl]" type="text" size="36" name="theme_settings[vimeourl]" value="<?php esc_attr_e( $options['vimeourl'] ); ?>" /><br/>
+                        <span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Vimeo channel/profile' ); ?></span></p>
+                    </div>
 
                     <div class="option-item">
                     	<p><b><?php _e( 'Linked In' ); ?></b></p>
@@ -71,10 +76,15 @@ function theme_settings_page() {
                     	<p><input id="theme_settings[instagramurl]" type="text" size="36" name="theme_settings[instagramurl]" value="<?php esc_attr_e( $options['instagramurl'] ); ?>" /><br/>
                     	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Instagram profile' ); ?></span></p>
                     </div>
+
+                    <div class="option-item">
+                        <p><b><?php _e( 'Google+' ); ?></b></p>
+                        <p><input id="theme_settings[googleurl]" type="text" size="36" name="theme_settings[googleurl]" value="<?php esc_attr_e( $options['googleurl'] ); ?>" /><br/>
+                        <span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Google profile' ); ?></span></p>
+                    </div>
                 </div>
             </div>
-            <Br />
-            <br />
+ 
             <div class="section postbox">
                 <div class="inside">
                     <h2 class="hndle ui-sortable-handle"><span>Google Analytics</span></h2>
