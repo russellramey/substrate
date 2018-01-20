@@ -14,34 +14,4 @@ Version: 1.0.0
 Substrate WordPress Theme © 2017 Russell Ramey
 Substrate is distributed under the terms of the GNU GPL
 */
-/************************************************************************************
-*** THEME RESET and BASE and COMPENENTS
-	  Add your specific theme styles below, or import theme from another file,
-    Bootstrap is used for Grid and Base Components. Docs: http://getbootstrap.com/css
-************************************************************************************/
-/* Base */
-@import url('assets/css/base.css');
 
-/************************************************************************************
-*** THEME STYLES
-	  Add your specific theme styles below, or import theme from another file
-************************************************************************************/
-
-
-
-/************************************************************************************
-*** WORDPRESS STYLES
-	  Default wordpress styles for WP generated classes
-************************************************************************************/
-/* Alignment
-   - Default wordpress alignment for visual editor */
-.alignleft{
-    float: left;
-}
-.alignright{
-    float:right;
-}
-.aligncenter{
-    float:none;
-    margin: 0 auto;
-}

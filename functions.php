@@ -1,6 +1,17 @@
 <?php
+/************************************************************************************
+*** Global varialbes
+	Variables for use in all templates and paritals
+************************************************************************************/
 // Global base url
-$base = 'includes/func';
+$base = '_includes/func';
+
+/* Directory references */
+global $template;
+global $partial;
+
+$template = '_templates';
+$partial = '_templates/partials';
 /************************************************************************************
 *** Setup functions
 ************************************************************************************/
@@ -10,11 +21,6 @@ include $base . '/theme-widgets.php';
 include $base . '/theme-comments.php';
 // Theme options
 include $base . '/global-options.php';
-
-/************************************************************************************
-*** Global variables functions
-************************************************************************************/
-include $base . '/global-variables.php';
 
 /************************************************************************************
 *** Shortcodes functions
