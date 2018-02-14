@@ -6,5 +6,5 @@
 
     <?php
     // Get comment count
-    //get_template_part('partials/entry', 'comments'); ?>
+    get_template_part('partials/entry', 'comments'); ?>
 </footer>

@@ -32,9 +32,14 @@ get_header(); ?>
                     the_content(); ?>
                 </div>
 
+            </section>
+
+            <section class="entry-footer">
+
                 <div class="entry-links">
                     <?php wp_link_pages(); ?>
                 </div>
+
             </section>
         </article>
 
