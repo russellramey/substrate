@@ -124,15 +124,15 @@ get_header(); ?>
 <form class="bt-form">
     <p>
         <label class="bt-label" for="name">Full name</label>
-        <input type="text" name="name" value="" />
+        <input type="text" name="name" value="" placeholder="Joe Smith" />
     </p>
     <p>
         <label class="bt-label" for="email">Email address</label>
-        <input type="email" name="email" />
+        <input type="email" name="email" placeholder="email@domain.com" />
     </p>
     <p>
         <label class="bt-label" for="comments">Comments</label>
-        <textarea name="comments"></textarea>
+        <textarea name="comments" placeholder="Let us know..."></textarea>
     </p>
     <p>
         <label class="bt-checkbox"><input type="checkbox" name="checkbox" value="checkbox">Checkbox</label>
