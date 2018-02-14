@@ -135,10 +135,10 @@ get_header(); ?>
         <textarea name="comments"></textarea>
     </p>
     <p>
-        <label for="checkbox2"><input type="checkbox" id="checkbox2" name="radio2" /> Checkbox</label>
+        <label class="bt-checkbox"><input type="checkbox" name="checkbox" value="checkbox">Checkbox</label>
     </p>
     <p>
-        <label for="radio2"><input type="radio" id="radio2" name="radio2" /> Radio</label>
+        <label class="bt-radio"><input type="radio" name="radio" value="radio">Radio</label>
     </p>
     <p class="bt-select">
         <label class="bt-label" for="sample">What should you choose?</label>

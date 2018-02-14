@@ -1,4 +1,4 @@
-// BASE JS FUNCTIONS
+// EDL JS FUNCTIONS
 jQuery( document ).ready(function($) {
 // Hide Header on on scroll down
 $.fn.bt_headerScroll = function(){
@@ -6,7 +6,7 @@ $.fn.bt_headerScroll = function(){
     var $this = $(this);
     var didScroll;
     var lastScrollTop = 0;
-    var delta = 50;
+    var delta = 0;
     var navbarHeight = $this.outerHeight();
     $(window).scroll(function(event){
         didScroll = true;
@@ -36,6 +36,32 @@ $.fn.bt_headerScroll = function(){
         lastScrollTop = st;
     }
 };
+
+// ANIMATE UTILITY NAV
+$.fn.bt_utility = function(){
+    $(document).scroll(function() {
+        if ($(document).scrollTop() > 300) {
+    		$('.bt-header').addClass('hide-utility');
+            $('.bt-nav--utility-spacer').hide();
+        } else {
+        	$('.bt-header').removeClass('hide-utility');
+            $('.bt-nav--utility-spacer').show();
+        }
+    });
+};
+// Mega Navigation
+$.fn.bt_meganav = function(){
+    $(this).click(function() {
+        $('.bt-nav--mega').toggleClass('show-mega');
+        $('body').toggleClass('noscroll');
+        $(this).find('i').toggleClass('edl-icon--close');
+        return false;
+    });
+    $('.bt-nav--mega a').click(function(){
+        $('.bt-nav--mega').removeClass('show-mega');
+        $('body').removeClass('noscroll');
+    });
+};
 // Accordion
 $.fn.bt_accordion = function(){
     // Set your action element
@@ -60,7 +86,7 @@ $.fn.bt_expand = function(){
     // Set your action element
     var action = $('.bt-expand--action');
     $(action).click(function(){
-        var moredetails = $(this).parent().parent().children('.bt-expand--content');
+        var moredetails = $(this).parent().children('.bt-expand--content');
         var viewmore = $(this);
         var txt = moredetails.is(':visible') ? 'View more +' : 'View less -';
         $(this).parent().find(viewmore).text(txt);
@@ -87,19 +113,19 @@ $.fn.bt_tabs = function (){
         if (!$(this).hasClass("active")) {
             var tabNum = $(this).index();
             var nthChild = tabNum+1;
-            $(".bt-tab--nav li.active").removeClass("active");
+            $(".bt-tab--nav > li.active").removeClass("active");
             $(this).addClass("active");
-            $(".bt-tab--panels li.active").removeClass("active");
-            $(".bt-tab--panels li:nth-child("+nthChild+")").addClass("active");
+            $(".bt-tab--panels > li.active").removeClass("active");
+            $(".bt-tab--panels > li:nth-child("+nthChild+")").addClass("active");
         }
     return false;
     });
 };
-// Form Infield Labels
+// Form text inputs
 $.fn.bt_form_labels = function (){
 
     // Find inputs
-    var inputs = $(this).find('input, textarea, select');
+    var inputs = $(this).find('input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea, select');
 
     // Find labels
     var labels = $(this).find('label.bt-label');
@@ -108,7 +134,7 @@ $.fn.bt_form_labels = function (){
     // Set active class
     var active = "has-value";
 
-    // For each input
+    // For each text based input
     $(inputs).each(function(){
         // On focus
         $(this).focus(function() {
@@ -125,6 +151,37 @@ $.fn.bt_form_labels = function (){
                 $(this).parent().find(labels).removeClass(active);
             }
         });
+
+        // Has value
+        if($(this).val()) {
+            $(this).parent().find(labels).addClass(active);
+        }
+    });
+
+    // Radio
+    $(this).find("input[type=checkbox]").on('change', function () {
+        // Toggle current selected checkbox
+        $(this).parent().toggleClass("selected");
+        return false;
+    });
+
+    // Checkbox
+    $(this).find("input[type=radio]").on('change', function () {
+        // Get all .input-radios from parent
+        var options = $(this).parent().parent().find('.bt-radio');
+        // Remove all 'selected' classes
+        $(options).removeClass('selected');
+        // Toggle current selected radio
+        $(this).parent().toggleClass("selected");
+        return false;
+    });
+
+};
+// Notices
+$.fn.bt_notice = function (){
+    $(this).click(function(){
+        $('.bt-notice').hide();
+        return false;
     });
 };
 });
