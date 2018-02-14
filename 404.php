@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <section id="content" role="main">
-    <div id="post-0" class="post not-found">
+    <div id="post-0" class="post not-found four0four">
         <div class="entry-header">
             <h1 class="entry-title"><?php _e( 'Not Found', 'substrate' ); ?></h1>
         </div>
