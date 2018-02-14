@@ -135,19 +135,23 @@ select{
   cursor: pointer;
   padding: 12px 15px;
 }
-.custom-select{
+.bt-select{
   position: relative;
   display: block;
 }
-.custom-select:after{
-    content: '\f078';
-    font-family: "FontAwesome" !important;
-    font-size: 14px;
-    display: block;
-    position: absolute;
+.bt-select:after{
+    content: '\203A';
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    float: right;
     right: 15px;
-    top: 50%;
+    width: auto;
+    top: -36px;
     pointer-events: none;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
 }
 input[type="checkbox"],
 input[type="radio"]{
@@ -196,9 +200,6 @@ form.bt-form label.has-value{
 form.bt-form .bt-select select {
     cursor:pointer;
     padding: 1rem;
-}
-form.bt-form .bt-select:after{
-    margin-top: -12px;
 }
 
 /* Radio & Checkbox */

@@ -193,7 +193,7 @@ get_header(); ?>
             <div class="bt-expand--content">
                 <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
             </div>
-            <p><a href="#" class="bt-expand--action button button-sml button-light">View more +</a></p>
+            <a href="#" class="bt-expand--action button button-sml button-light">View more +</a>
         </div>
         <Br />
 <h4>Expand & Collapse List</h4>
