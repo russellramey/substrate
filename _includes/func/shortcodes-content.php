@@ -29,7 +29,7 @@ function getcontent_func( $atts, $content = null ) {
 
 			<!-- ADD YOUR LAYOUT CODE HERE -->
 
-			<?php 
+			<?php
 		    // End WP Loop
 		    endwhile; endif; ?>
 		</div>

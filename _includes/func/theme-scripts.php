@@ -4,8 +4,8 @@
 	Add scripts to theme
 ************************************************************************************/
 // Setup function
-add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
-function blankslate_load_scripts() {
+add_action( 'wp_enqueue_scripts', 'substrate_load_scripts' );
+function substrate_load_scripts() {
 	// Jquery
 	wp_enqueue_script( 'jquery' );
 

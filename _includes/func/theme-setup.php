@@ -32,16 +32,16 @@ function substrate_setup() {
 add_action( 'after_setup_theme', 'substrate_setup' );
 
 // WP Title
-add_filter( 'the_title', 'blankslate_title' );
-function blankslate_title( $title ) {
+add_filter( 'the_title', 'substrate_title' );
+function substrate_title( $title ) {
 	if ( $title == '' ) {
 		return '&rarr;';
 	} else {
 		return $title;
 	}
 }
-add_filter( 'wp_title', 'blankslate_filter_wp_title' );
-function blankslate_filter_wp_title( $title ) {
+add_filter( 'wp_title', 'substrate_filter_wp_title' );
+function substrate_filter_wp_title( $title ) {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 

@@ -4,7 +4,7 @@ get_header(); ?>
 
 <section id="content" role="main">
     <div class="entry-header">
-        <h1 class="entry-title"><?php _e( 'Archives: ', 'blankslate' ); ?><?php single_cat_title(); ?></h1>
+        <h1 class="entry-title"><?php _e( 'Archives: ', 'substrate' ); ?><?php single_cat_title(); ?></h1>
         <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
     </div>
 
