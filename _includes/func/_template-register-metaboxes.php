@@ -18,6 +18,6 @@ function create_metabox() {
 
 	// Add your fields below...
 	$metabox_var->add_field( array(
-	    
+
 	));
 }
