@@ -61,16 +61,6 @@ function line_func( $atts, $content = null ){
 }
 add_shortcode( 'line', 'line_func' );
 
-// Pullquote
-// Add a line seperator to the content
-//[pullquote]
-function pullquote_func( $atts, $content = null ){
-	$url = get_permalink();
-	$icon = '<i class="edl-icon--social-twitter edl-icon"></i>';
-	return '<blockquote class="pullquote edl-panel"><p>' . $content . '</p><a class="tweetthis" href="https://twitter.com/intent/tweet?url=' . $url . '&via=Sabre_Corp&text=' . urlencode(html_entity_decode($content)) . '" target="_blank">' . $icon . 'Share</a></blockquote>';
-}
-add_shortcode( 'pullquote', 'pullquote_func' );
-
 // ANCHOR
 // use this to add jump links into content
 // [anchor id=" "]
@@ -82,3 +72,15 @@ function anchor_func( $atts ) {
 	return "<div id='$id'></div>";
 }
 add_shortcode( 'anchor', 'anchor_func' );
+
+// GAP
+// Add a line seperator to the content
+// [gap]
+function gap_func( $atts, $content = null ){
+	extract( shortcode_atts( array(
+		'size' => '3',
+		'class' => '',
+	), $atts ) );
+	return "<div class='gap {$class}' style='padding: {$size}% 0;'></div>";
+}
+add_shortcode( 'gap', 'gap_func' );
