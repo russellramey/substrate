@@ -4,6 +4,7 @@
 	Thumbnails, navigation menus, theme support, etc...
 ************************************************************************************/
 // Setup function
+add_action( 'after_setup_theme', 'substrate_setup' );
 function substrate_setup() {
     // Theme language support
 	load_theme_textdomain( 'substrate', get_template_directory() . '/languages' );
@@ -28,11 +29,10 @@ function substrate_setup() {
             )
 	    );
 }
-// Add setup to theme
-add_action( 'after_setup_theme', 'substrate_setup' );
 
 // WP Title
 add_filter( 'the_title', 'substrate_title' );
+add_filter( 'wp_title', 'substrate_filter_wp_title' );
 function substrate_title( $title ) {
 	if ( $title == '' ) {
 		return '&rarr;';
@@ -40,7 +40,6 @@ function substrate_title( $title ) {
 		return $title;
 	}
 }
-add_filter( 'wp_title', 'substrate_filter_wp_title' );
 function substrate_filter_wp_title( $title ) {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }

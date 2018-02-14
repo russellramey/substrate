@@ -13,10 +13,9 @@ function section_func( $atts, $content = null ){
 		'class' => '',
 		'width' => '',
 		'align' => '',
-		'max_width' => ''
 	), $atts ) );
 	// Return html
-	return "<div class='content-row {$width} {$class} off-ctr' style='max-width:{$max_width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
+	return "<div class='content-row {$width} {$class} off-ctr' style='max-width:{width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
 }
 add_shortcode( 'section', 'section_func' );
 
@@ -59,6 +58,6 @@ add_shortcode( 'col-child', 'column_func' );
 // Break the contraints of the container
 // [fullwidth]
 function fullwidth_func( $atts, $content = null ){
-	return '<div class="module full-width">' . do_shortcode ($content) . '</div>';
+	return '<div class="content-row full-width">' . do_shortcode ($content) . '</div>';
 }
 add_shortcode( 'fullwidth', 'fullwidth_func' );
