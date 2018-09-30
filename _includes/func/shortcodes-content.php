@@ -1,20 +1,22 @@
 <?php
 /************************************************************************************
 *** Content Shortcode
-	Add module content to other content...
+	Add any content type to page/post or other...
 ************************************************************************************/
 /* GET CONTENT */
+/* [getcontent show="" type="" grid="" order="" taxonomy="" term="" pagination="" width="" layout=""] */
 function getcontent_func( $atts, $content = null ) {
 	/* Extract and assign params */
 	extract( shortcode_atts( array(
 		'show' => -1,  // Number of entries to show
 		'type' => '',  // Type of content to get (use post-type name)
-		'grid' => 4,   // Default grid layout
+		'grid' => '',   // Default grid layout (use bootstrap classes)
 		'order' => '',  // Order to display (by title, date, etc...)
 		'taxonomy' => '', // Select taxonomy (category, tags, custom types)
 		'term' => '', // Assign term for selected taxonomy
 		'pagination' => 'false', // To show /page/ navigation
-		'template' => 'card' // Select template style to use (card/title/panel)
+		'width' => '100%', // Set max width for the item container
+		'layout' => 'default' // Select template style to use (default/card/title/panel, etc...)
 	), $atts ) );
 
 	// Prepare output cache
@@ -27,36 +29,53 @@ function getcontent_func( $atts, $content = null ) {
 		$paged = false;
 	}
 
-	// Identify content params
+	// Check for GRID option, this will override defaults
+	if($grid != ''){
+		// Get array of grid
+		$contentClasses = explode(',', $grid);
+	}
+
+	// Prep Query and Identify content params
 	$content = new WP_Query( array(
-		'posts_per_page' => $show,
-		'post_type' => "$type",
-		'orderby' => "$order",
-		'$taxonomy' => "$term",
-		'paged' => $paged
+		'posts_per_page' => $show, // Show posts per page
+		'post_type' => "$type", // Set post type to query
+		'orderby' => "$order", // Order posts by
+		'tag' => "", // Query by post_tag
+		$taxonomy => "$term", // Query by custom taxonomy (ex. Cateogry, Genre, etc...)
+		'ignore_sticky_posts' => 1, // Ignore Sticky Posts by default
+		'post__not_in' => array(get_the_id()), // Hide current post
+		'paged' => $paged // Set paged variable for pagination (see above PAGED function)
 	));
 
-
-	// Default Classes for grid
-	$contentClasses = array ( 'col-md-3', 'col-sm-4');
-
+	// Allowed $layouts
+	$layout_array = array('card', 'panel', 'block', 'list');
 
 	// Start WP Loop
 	if ( $content->have_posts() ) : ?>
-			<div class="getcontent shortcode-getcontent">
-				<div class="row">
-					<ul class="getcontent-list content-<?php echo $type; ?>">
+		<div class="getcontent shortcode-getcontent">
+			<div class="row row-nm">
+				<ul class="getcontent-list content-<?php echo $type; ?>" style="max-width:<?php echo $width; ?>">
 
-						<?php while ( $content->have_posts() ) : $content->the_post();
+					<?php while ( $content->have_posts() ) : $content->the_post();
 
-							// CUSTOM LOOP CODE HERE
+						// If layout provided is allowed
+						if ($layout && in_array($layout, $layout_array)){
 
-					    // End WP Loop
-					    endwhile; ?>
+							// Parameter layout options here
 
-					</ul>
-				</div>
+						} else {
+
+							// Default layout template here
+
+						}
+
+				    // End WP Loop
+				    endwhile; ?>
+
+				</ul>
 			</div>
+		</div>
+
 	<?php
 	// If paged show pagination
 	if($pagination === 'true'){

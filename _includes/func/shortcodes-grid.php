@@ -10,12 +10,12 @@
 function section_func( $atts, $content = null ){
 	// Extract attributes from shortcode
 	extract( shortcode_atts( array(
-		'class' => '',
-		'width' => '',
-		'align' => '',
+		'class' => '', // Add custom classes
+		'width' => '', // Set max-with (relative to container/wrapper)
+		'align' => '', // Set text alignment
 	), $atts ) );
 	// Return html
-	return "<div class='content-row {$width} {$class} off-ctr' style='max-width:{width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
+	return "<div class='content-row {$class} off-ctr' style='max-width:{$width}px'><div class='row ${align}'>" . do_shortcode ($content) . '</div></div>';
 }
 add_shortcode( 'section', 'section_func' );
 
@@ -25,19 +25,23 @@ add_shortcode( 'section', 'section_func' );
 function column_func( $atts, $content = null ) {
 	// Extract attributes from shortcode
 	extract( shortcode_atts( array(
-		'class' => '',
-		'sm'    => '',
-		'md'	=> '',
-		'lg'	=> '',
+		'class' => '', // Add custom classes
+		'xs'    => '', // Set grid for xsmall screens (bootstrap grid)
+		'sm'    => '', // Set grid for small screens (bootstrap grid)
+		'md'	=> '', // Set grid for md screens (bootstrap grid)
+		'lg'	=> '', // Set grid for lg screens (bootstrap grid)
 	), $atts ) );
 
-
 	// Create arrays for bootstrap classes
+	$xsmall = '';
 	$small = '';
 	$medium = '';
 	$large = '';
 
-	// Check $atts array for value
+	// Check $atts array for supplied value
+	if(array_key_exists('xs', $atts)){
+		$xsmall = 'col-xs-' . $xs;
+	}
 	if(array_key_exists('sm', $atts)){
 		$small = 'col-sm-' . $sm;
 	}
@@ -49,15 +53,7 @@ function column_func( $atts, $content = null ) {
 	}
 
 	// Return div with proper bootstrap classes
-	return "<div class='$small $medium $large {$class}'>" . do_shortcode ($content) . "</div>";
+	return "<div class='$xsmall $small $medium $large {$class}'>" . do_shortcode ($content) . "</div>";
 }
 add_shortcode( 'col', 'column_func' );
 add_shortcode( 'col-child', 'column_func' );
-
-// FULL WIDTH
-// Break the contraints of the container
-// [fullwidth]
-function fullwidth_func( $atts, $content = null ){
-	return '<div class="content-row full-width">' . do_shortcode ($content) . '</div>';
-}
-add_shortcode( 'fullwidth', 'fullwidth_func' );
