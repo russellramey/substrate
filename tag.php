@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <div class="header">
         <h1 class="entry-title"><?php _e( 'Archives: ', 'substrate' ); ?><?php single_tag_title(); ?></h1>
     </div>
@@ -18,7 +18,7 @@ get_header(); ?>
     <?php
     // Pagination
     get_template_part( $partial . '/pagination'); ?>
-</section>
+</div>
 
 <?php
 // Get the footer

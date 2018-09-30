@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <?php
     // Start WP Loop
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -11,12 +11,12 @@ get_header(); ?>
     // End WP Loop
     endwhile; endif; ?>
 
-    <footer class="footer">
+    <div class="entry-footer">
         <?php
         // Pagination
-        get_template_part( $partial . '/pagination-single' ); ?>
-    </footer>
-</section>
+        get_template_part( $partial . '/pagination' ); ?>
+    </div>
+</div>
 
 <?php
 // Get the footer

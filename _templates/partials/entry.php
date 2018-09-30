@@ -4,8 +4,8 @@ global $partial;
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); //WP Post Classes ?>>
-    <header class="entry-header">
+<div id="post-<?php the_ID(); ?>" <?php post_class(); //WP Post Classes ?>>
+    <div class="entry-header">
         <?php edit_post_link(); //WP Edit Post Link ?>
         <?php
         // If is singluar
@@ -23,7 +23,7 @@ global $partial;
             // If not search show entry meta
             get_template_part( $partial . '/entry-meta' );
         } ?>
-    </header>
+    </div>
 
     <?php
     // Get content
@@ -32,10 +32,10 @@ global $partial;
     } else {
         get_template_part( $partial . '/entry-content');
     } ?>
-    
+
 
     <?php if ( is_single() ) {
         // Add footer for search results
         get_template_part( $partial . '/entry-footer' );
     } ?>
-</article>
+</div>

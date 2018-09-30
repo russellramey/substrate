@@ -1,4 +1,4 @@
-<footer class="entry-footer">
+<div class="entry-footer">
     <span class="entry-meta--cat">
         <?php _e( 'Categories: ', 'substrate' ); ?><?php the_category( ', ' ); ?>
     </span>
@@ -7,4 +7,4 @@
     <?php
     // Get comment count
     get_template_part('partials/entry', 'comments'); ?>
-</footer>
+</div>

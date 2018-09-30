@@ -8,12 +8,12 @@ get_header(); ?>
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <header class="entry-header">
+            <section class="entry-header">
                 <?php edit_post_link(); ?>
                 <h1 class="entry-title">
                     <?php the_title(); ?>
                 </h1>
-            </header>
+            </section>
 
             <section class="entry-body">
                 <?php

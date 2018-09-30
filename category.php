@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <div class="entry-header">
         <h1 class="entry-title"><?php _e( 'Archives: ', 'substrate' ); ?><?php single_cat_title(); ?></h1>
         <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
     <?php
     // Get pagination
     get_template_part( $partial . '/pagination' ); ?>
-</section>
+</div>
 
 <?php
 // Get the footer

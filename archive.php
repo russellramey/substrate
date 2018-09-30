@@ -24,7 +24,7 @@ get_header(); ?>
 
     <?php
     // Pagination
-    get_template_part( $partial . '/pagination-single' ); ?>
+    get_template_part( $partial . '/pagination' ); ?>
 </section>
 
 <?php

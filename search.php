@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <?php
     // If posts found
     if ( have_posts() ) : ?>
@@ -29,20 +29,20 @@ get_header(); ?>
     // If no posts found
     else : ?>
 
-        <article id="post-0" class="post no-results not-found">
-            <header class="entry-header">
+        <div id="post-0" class="post no-results not-found">
+            <div class="entry-header">
                 <h2 class="entry-title"><?php _e( 'Nothing Found', 'substrate' ); ?></h2>
-            </header>
-            <section class="entry-content">
+            </div>
+            <div class="entry-content">
                 <p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'substrate' ); ?></p>
                 <?php get_search_form(); ?>
-            </section>
-        </article>
+            </div>
+        </div>
 
     <?php
     // End If
     endif; ?>
-</section>
+</div>
 
 <?php
 // Get the footer

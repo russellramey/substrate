@@ -1,4 +1,4 @@
-<section class="entry-body">
+<div class="entry-body">
     <?php
     // If has thumbnail
     if ( has_post_thumbnail() ) { ?>
@@ -15,7 +15,4 @@
         the_content(); ?>
     </div>
 
-    <div class="entry-links">
-        <?php wp_link_pages(); ?>
-    </div>
-</section>
+</div>

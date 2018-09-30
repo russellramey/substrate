@@ -11,9 +11,9 @@
                 <h3 class="comments-title"><?php comments_number(); ?></h3>
 
                 <?php if ( get_comment_pages_count() > 1 ) : ?>
-                    <nav id="comments-nav-above" class="comments-navigation" role="navigation">
+                    <div id="comments-nav-above" class="comments-navigation" role="navigation">
                         <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-                    </nav>
+                    </div>
                 <?php endif; ?>
 
                 <ul>
@@ -21,9 +21,9 @@
                 </ul>
 
                 <?php if ( get_comment_pages_count() > 1 ) : ?>
-                    <nav id="comments-nav-below" class="comments-navigation" role="navigation">
+                    <div id="comments-nav-below" class="comments-navigation" role="navigation">
                         <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-                    </nav>
+                    </div>
                 <?php endif; ?>
             </div>
         <?php
@@ -32,12 +32,12 @@
             $ping_count = count( $comments_by_type['pings'] );
         ?>
 
-        <section id="trackbacks-list" class="comments">
+        <div id="trackbacks-list" class="comments">
             <h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'substrate' ) : __( 'Trackback', 'substrate' ) ); ?></h3>
             <ul>
                 <?php wp_list_comments( 'type=pings&callback=substrate_custom_pings' ); ?>
             </ul>
-        </section>
+        </div>
 
         <?php
         endif;

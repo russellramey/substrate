@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <div class="header">
         <?php the_post(); ?>
         <h1 class="entry-title author"><?php _e( 'Author Archives', 'substrate' ); ?>: <?php the_author_link(); ?></h1>
@@ -21,7 +21,7 @@ get_header(); ?>
     <?php
     // Get pagination
     get_template_part( $partial . '/pagination' ); ?>
-</section>
+</div>
 
 <?php
 // Get the footer

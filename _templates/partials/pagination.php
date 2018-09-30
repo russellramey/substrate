@@ -3,16 +3,16 @@
 global $wp_query;
 if ( $wp_query->max_num_pages > 1 ) { ?>
 
-    <nav id="nav-below" class="navigation" role="navigation">
+    <div id="nav-below" class="navigation" role="navigation">
         <ul class="pagination">
             <li class="prev-entries"><?php next_posts_link(sprintf( __( '<i class="fa fa-chevron-left"></i> OLDER', 'substrate' ) ) ) ?></li>
             <li class="next-entries"><?php previous_posts_link(sprintf( __( 'NEWER <i class="fa fa-chevron-right"></i>', 'substrate' ) ) ) ?></li>
         </ul>
-    </nav>
+    </div>
 
 <?php } else { ?>
 
-    <nav id="nav-below" class="navigation" role="navigation">
+    <div id="nav-below" class="navigation" role="navigation">
         <?php
         // If is single post/entry
         if (is_single()) { ?>
@@ -28,6 +28,6 @@ if ( $wp_query->max_num_pages > 1 ) { ?>
                 <li class="next-entries"><?php previous_posts_link( 'NEWER <i class="fa fa-chevron-right"></i>', $content->max_num_pages) ?></li>
             </ul>
         <?php } ?>
-    </nav>
+    </div>
 
 <?php } ?>

@@ -1,4 +1,4 @@
-<section id="sidebar" role="complementary">
+<div id="sidebar" role="complementary">
     <?php
     // Active sidebar
     if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
@@ -10,4 +10,4 @@
     <?php
     // End if active sidebar
     endif; ?>
-</section>
+</div>

@@ -1,4 +1,4 @@
-<section class="entry-body">
+<div class="entry-body">
     <?php
     // If has thumbnail
     if ( has_post_thumbnail() ) { ?>
@@ -20,4 +20,4 @@
     if( is_search() ) { ?>
         <div class="entry-links"><?php wp_link_pages(); ?></div>
     <?php } ?>
-</section>
+</div>

@@ -2,7 +2,7 @@
 // Get the header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main">
     <div id="post-0" class="post not-found four0four">
         <div class="entry-header">
             <h1 class="entry-title"><?php _e( 'Not Found', 'substrate' ); ?></h1>
@@ -12,7 +12,7 @@ get_header(); ?>
             <?php get_search_form(); ?>
         </div>
     </div>
-</section>
+</div>
 
 <?php
 // Get the footer

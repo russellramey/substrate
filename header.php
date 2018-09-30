@@ -25,7 +25,7 @@
 <body <?php body_class(); // WP body classes?>>
 
 <!-- HEADER -->
-<header class="bt-header">
+<div class="bt-header">
     <div class="bt-header--main">
         <div class="bt-logo">
             <a href="<?php echo bloginfo('url'); ?>" title="Home">
@@ -49,7 +49,7 @@
             <a href="#" title="Show menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
         </div>
     </div>
-</header>
+</div>
 
 <!-- CONTENT -->
 <div class="wrapper container">
