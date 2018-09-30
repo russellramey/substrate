@@ -127,4 +127,13 @@ function filter_meta_wysiwyg($content) {
 	// return formatted string
 	return do_shortcode($filtered_content);
 }
+
+/***********************************************************
+** Register Post metadata in REST API
+************************************************************/
+register_rest_field( array('post', 'page'), 'metadata', array(
+    'get_callback' => function ( $data ) {
+        return get_post_meta( $data['id'], '', '' );
+    },
+));
 ?>
