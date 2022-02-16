@@ -6,10 +6,9 @@
     transition: all 200ms ease-in-out;
     .card-image{
         position: relative;
-        box-shadow: 0 0 .25rem .375rem rgba($hos-dark, .125);
         overflow: hidden;
         position: relative;
-        padding-top: 60%;
+        padding-top: 56.25%;
         img,
         a{
             display: block;
@@ -22,7 +21,7 @@
         img{
             top: 50%;
             transform: translate(0, -50%);
-            height: auto;
+            height: 100%;
         }
     }
     .card-header,

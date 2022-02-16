@@ -9,10 +9,11 @@ function substrate_theme_typography() {
     add_theme_support( 'disable-custom-font-sizes' );
 	// Editor Font Sizes
 	add_theme_support('editor-font-sizes', array(
+        array('name' => 'Smaller', 'size' => 10, 'slug' => 'smaller'),
 		array('name' => 'Small', 'size' => 12, 'slug' => 'small'),
 		array('name' => 'Medium', 'size' => 14, 'slug' => 'medium'),
         array('name' => 'Large', 'size' => 21, 'slug' => 'large'),
-		array('name' => 'Drama', 'size' => 96, 'slug' => 'drama'),
+		array('name' => 'Larger', 'size' => 36, 'slug' => 'larger'),
     ));
 }
 // Add setup to theme
