@@ -1,0 +1,25 @@
+{
+  "name": "bswp-content-blocks",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.2",
+    "@wordpress/scripts": "^6.2.0",
+    "bootstrap": "^5.1.3",
+    "css-loader": "^3.6.0",
+    "css-minimizer-webpack-plugin": "^1.3.0",
+    "file-loader": "^5.1.0",
+    "ignore-emit-webpack-plugin": "^2.0.6",
+    "mini-css-extract-plugin": "^0.8.2",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^7.1.0"
+  },
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  }
+}

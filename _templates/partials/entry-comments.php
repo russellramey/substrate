@@ -1,5 +1,0 @@
-<?php 
-// If comments
-if ( comments_open() ) { 
-	echo '<span class="meta-sep">|</span> <span class="comments-link"><a href="' . get_comments_link() . '">' . sprintf( __( 'Comments', 'substrate' ) ) . '</a></span>';
-} ?>

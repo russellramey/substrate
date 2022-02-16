@@ -1,23 +1,24 @@
 <?php
-// Get the header
+/***********************************************************
+*
+** SINGLE - DEFAULT
+** Default single view for posts.
+*
+************************************************************/
+
+// Include header
 get_header(); ?>
 
-<div id="content" role="main">
-    <?php
-    // Start WP Loop
-    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( $partial . '/entry' ); ?>
-    <?php
-    // End WP Loop
-    endwhile; endif; ?>
-
-    <div class="entry-footer">
-        <?php
-        // Pagination
-        get_template_part( $partial . '/pagination' ); ?>
-    </div>
-</div>
+<?php
+// If post has a thumbnail
+if ( has_post_thumbnail() && get_post_type() === 'post' ) {
+    // Get template with Thumbnail as Hero
+    get_template_part('_templates/single-thumbnail');
+} else {
+    // Get default template
+    get_template_part('_templates/single-nothumbnail');
+} ?>
 
 <?php
-// Get the footer
+// Include footer
 get_footer(); ?>

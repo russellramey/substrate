@@ -1,0 +1,57 @@
+// // Imports
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+//
+// // Fonts
+// $font-body: 'Work Sans', Arial, sans-serif;
+// $font-headline: 'Playfair Display', Times, serif;
+// // $font-body: Helvetica, Arial, sans-serif;
+// // $font-headline: Times, serif;
+// $font-weight-bold: 700;
+// $font-weight-regular: 400;
+// $font-size-default: 1.125rem;
+// $font-size-sm: .75rem;
+// $font-size-md: .875rem;
+// $font-size-lg: 1.313rem;
+// $font-size-h1: 3rem;
+// $font-size-h2: 2.25rem;
+// $font-size-h3: 1.5rem;
+// $font-size-drama: 6rem;
+
+// Theme Colors
+$hos-gold: #DBFF00;
+$hos-purple: #B10BFF;
+$hos-light: #FBFBFB;
+$hos-dark: #212121;
+$hos-gray: #818181;
+$hos-gray-alt: #E5E5E5;
+
+// BS Colors
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #B10BFF;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #ffc107;
+$yellow:  #DBFF00;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+$gray: #6c757d;
+$gray-light: lighten($gray, 30);
+$gray-dark: darken($gray, 20);
+$black: #000000;
+$white: #ffffff;
+$light: #f8f9fa;
+$dark: #212529;
+
+// BS widths
+$width_sm: 540px;
+$width_md: 720px;
+$width_lg: 960px;
+$width_xl: 1140px;
+$width_xxl: 1320px;
+$width_full: 100%;
+// Custom Widths
+$width_default: $width_xxl;
+$width_wide: 1536px;
+$width_narrow: $width_lg;

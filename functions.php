@@ -1,54 +1,42 @@
 <?php
 /************************************************************************************
-*** Global varialbes
-	Variables for use in all templates and paritals
+*** CONSTANTS
 ************************************************************************************/
-// Global base url
-$base = '_includes/func';
-
-/* Directory references */
-global $template;
-global $partial;
-
-$template = '_templates';
-$partial = '_templates/partials';
-/************************************************************************************
-*** Setup functions
-************************************************************************************/
-include $base .'/theme-setup.php';
-include $base . '/theme-scripts.php';
-include $base . '/theme-widgets.php';
-include $base . '/theme-comments.php';
-// Theme options
-include $base . '/theme-options.php';
 
 /************************************************************************************
-*** Shortcodes functions
+*** Theme Setup
+	Basic theme setup
 ************************************************************************************/
-include $base . '/shortcodes-global.php';
-include $base . '/shortcodes-grid.php';
+include '_includes/theme-setup.php';
+include '_includes/theme-scripts.php';
+include '_includes/theme-styles.php';
+include '_includes/theme-colors.php';
+include '_includes/theme-typography.php';
 
 /************************************************************************************
-*** Contnet functions
+*** Theme Methods
+	Global functions that can be used within templates and theme files
 ************************************************************************************/
-
-
+include '_includes/method-post-metadata.php';
 
 /************************************************************************************
-*** Taxonomy functions
+*** Theme Content
+	Custom post types unique to this theme
 ************************************************************************************/
+// Post types
 
-
-/************************************************************************************
-*** Metabox functions
-    Using CMB2 metabox framework. Docs: https://github.com/webdevstudios/CMB2/wiki
-************************************************************************************/
-// Add CMB2 Library (includes/lib/cmb)
-if ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
-	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
-} elseif ( file_exists( dirname( __FILE__ ) . '/includes/lib/cmb/init.php' ) ) {
-	require_once dirname( __FILE__ ) . '/includes/lib/cmb/init.php';
+// Metaboxes (uses CMB2 library)
+// First include CMB2 init script (required)
+if ( file_exists( dirname( __FILE__ ) . '/_library/cmb/init.php' ) ) {
+	// CMB2 initiate
+	require_once dirname( __FILE__ ) . '/_library/cmb/init.php';
+	// CMB Metaboxes
 }
-// Add your CMB2 metabox funcitons below
 
-?>
+/************************************************************************************
+*** Theme API
+	Custom functions for API responses
+************************************************************************************/
+include '_includes/api-filter.php';
+include '_includes/api-metadata.php';
+include '_includes/api-protected-routes.php';

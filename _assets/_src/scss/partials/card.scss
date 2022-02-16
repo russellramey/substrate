@@ -1,0 +1,91 @@
+.card{
+    overflow: hidden;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    transition: all 200ms ease-in-out;
+    .card-image{
+        position: relative;
+        box-shadow: 0 0 .25rem .375rem rgba($hos-dark, .125);
+        overflow: hidden;
+        position: relative;
+        padding-top: 60%;
+        img,
+        a{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            top: 50%;
+            transform: translate(0, -50%);
+            height: auto;
+        }
+    }
+    .card-header,
+    .card-footer{
+        display: none;
+
+    }
+    .card-action{
+        margin: 0;
+    }
+    &.card-alt{
+        .card-text,
+        .card-action{
+            display: none;
+        }
+        .card-footer{
+            display: block;
+        }
+        .card-title{
+            margin: .5rem .25rem;
+        }
+    }
+    &.card-tile{
+        border: none;
+        border-radius: 0;
+        .card-image{
+            padding-top: 62.25%;
+            box-shadow: none;
+        }
+        .card-body,
+        .card-footer{
+            display: none;
+        }
+        .card-header{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            font-size: $font-size-sm;
+            background: none;
+            pointer-events: none;
+            line-height: 1.25;
+            padding: 1rem;
+            padding-left: 2.75rem;
+            text-shadow: 0 0 .25rem rgba($black, .25);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            ::before{
+                content: '\0025B6';
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                transform: translate(0, -48%);
+                font-size: 1.375rem;
+            }
+        }
+        &:hover,
+        &:focus{
+            box-shadow: 0 0 0 6px $hos-gold;
+            z-index: 1;
+        }
+    }
+}

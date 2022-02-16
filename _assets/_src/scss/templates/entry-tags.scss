@@ -1,0 +1,9 @@
+.entry-tags{
+    a{
+        color: $hos-dark;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

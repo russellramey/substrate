@@ -1,32 +1,46 @@
 <?php
-// Get the header
+/***********************************************************
+*
+** ARCHIVE TEMPLATE
+** WP default template for showing post archives.
+*
+************************************************************/
+
+// Include header
 get_header(); ?>
+    <div class="row">
+        <div id="main-content" role="main" class="col-12">
+            <div id="post-0" class="entry-content">
+                <div class="entry-header">
+                    <h1 class="entry-title"><?php single_cat_title(); ?></h1>
+                    <?php
+                        // If description exists, show on page
+                        if ( '' != category_description() ) {
+                            echo apply_filters( 'archive_meta', '<div class="entry-meta">' . category_description() . '</div>' );
+                        }
+                    ?>
+                </div>
 
-<section id="content" role="main">
-    <div class="entry-header">
-        <h1 class="entry-title">
-            <?php
-                if ( is_day() ) { printf( __( 'Daily Archives: %s', 'substrate' ), get_the_time( get_option( 'date_format' ) ) ); }
-                elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'substrate' ), get_the_time( 'F Y' ) ); }
-                elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'substrate' ), get_the_time( 'Y' ) ); }
-                else { _e( 'Archives', 'substrate' ); }
-            ?>
-        </h1>
+                <div class="entry-body">
+                    <ul class="row p-0">
+                        <?php
+                        // WP Loop
+                        if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <li class="post-container col-lg-3 col-md-4 col-sm-6">
+                                <?php get_template_part( '_templates/partials/element-card', null, ['type' => null, 'min' => null] ); ?>
+                            </li>
+                        <?php endwhile; else : ?>
+
+                            <li class="col-12">
+                                <h3 class="text-center">Nothing found that match the search criteria.</h3>
+                            </li>
+
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <?php
-    // Start WP Loop
-    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( $partial . '/entry' ); ?>
-    <?php
-    // End WP Loop
-    endwhile; endif; ?>
-
-    <?php
-    // Pagination
-    get_template_part( $partial . '/pagination' ); ?>
-</section>
-
 <?php
-// Get the footer
+// Include footer
 get_footer(); ?>

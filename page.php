@@ -1,53 +1,22 @@
 <?php
-// Get the header
+/***********************************************************
+*
+** PAGE TEMPLATE
+** WP default template for Page posts.
+*
+************************************************************/
+
+// Include header
 get_header(); ?>
 
-<section id="content" role="main">
+<div id="content" role="main" class="col-12">
     <?php
-    // Start WP Loop
+    // WP Loop
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <section class="entry-header">
-                <?php edit_post_link(); ?>
-                <h1 class="entry-title">
-                    <?php the_title(); ?>
-                </h1>
-            </section>
+        <?php the_content(); ?>
 
-            <section class="entry-body">
-                <?php
-                // If has thumbnail
-                if ( has_post_thumbnail() ) { ?>
-                    <div class="entry-thumb">
-                        <?php
-                        // Show thumbnail
-                        the_post_thumbnail(); ?>
-                    </div>
-                <?php } ?>
+    <?php endwhile; endif; ?>
+</div>
 
-                <div class="entry-content">
-                    <?php
-                    // Show content
-                    the_content(); ?>
-                </div>
-
-            </section>
-
-            <section class="entry-footer">
-
-                <div class="entry-links">
-                    <?php wp_link_pages(); ?>
-                </div>
-
-            </section>
-        </article>
-
-    <?php
-    // End WP Loop
-    endwhile; endif; ?>
-</section>
-
-<?php
-// Get the footer
-get_footer(); ?>
+<?php get_footer(); ?>

@@ -1,19 +1,17 @@
 <?php
-// Get the header
+/***********************************************************
+*
+** 404
+** Default template for 404 pages
+*
+************************************************************/
+
+// Include header
 get_header(); ?>
 
-<div id="content" role="main">
-    <div id="post-0" class="post not-found four0four">
-        <div class="entry-header">
-            <h1 class="entry-title"><?php _e( 'Not Found', 'substrate' ); ?></h1>
-        </div>
-        <div class="entry-content">
-            <p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'substrate' ); ?></p>
-            <?php get_search_form(); ?>
-        </div>
-    </div>
+<div id="post-0" class="entry-content">
+    <h1 class="text-center">404 Not Found</h1>
+    <p class="text-center">Whoops, this page does not exist or may have moved.</p>
 </div>
 
-<?php
-// Get the footer
-get_footer(); ?>
+<?php get_footer(); ?>

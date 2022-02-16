@@ -1,0 +1,58 @@
+// Wordpress color classes
+// Text colors
+.has-text-color,
+.has-inline-color{
+	&.has-gold-color{
+		color: $hos-gold;
+	}
+	&.has-purple-color{
+		color: $hos-purple;
+	}
+	&.has-white-color{
+		color: $hos-light;
+	}
+	&.has-black-color{
+		color: $hos-dark;
+	}
+	&.has-pure-white-color{
+		color: $white;
+	}
+	&.has-prue-black-color{
+		color: $black;
+	}
+	&.has-gray-light-color{
+		color: $hos-gray-alt;
+	}
+	&.has-gray-color{
+		color: $hos-gray;
+	}
+}
+// Background colors
+.has-background{
+	padding: 1rem 1.5rem;
+	border-radius: .25rem;
+	&.has-gold-background-color{
+		background-color: $hos-gold;
+	}
+	&.has-purple-background-color{
+		background-color: $hos-purple;
+	}
+	&.has-white-background-color{
+		background-color: $hos-light;
+	}
+	&.has-black-background-color{
+		background-color: $hos-dark;
+	}
+	&.has-pure-white-background-color{
+		background-color: $white;
+	}
+	&.has-pure-black-background-color{
+		background-color: $black;
+	}
+	&.has-gray-light-background-color{
+		background-color: $hos-gray-alt;
+	}
+	&.has-gray-background-color{
+		background-color: $hos-gray;
+	}
+}
