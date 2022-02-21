@@ -20,4 +20,4 @@
         get_template_part('_templates/partials/element-header'); ?>
 
         <!-- Content Container -->
-        <section id="content" class="container-fluid content-width-lg">
+        <section id="content" class="container-fluid max-width-xxl">

@@ -1,15 +1,21 @@
 /****************************************************************
  WIDTH
 ****************************************************************/
-.content-width-sm{
-	max-width: 960px;
+.max-width-sm{
+	max-width: $width_sm;
 }
-.content-width-md{
-	max-width: 1170px;
+.max-width-md{
+	max-width: $width_md;
 }
-.content-width-lg{
-	max-width: 1440px;
+.max-width-lg{
+	max-width: $width_lg;
 }
-.content-width-xlg{
-	max-width: 100%;
+.max-width-xl{
+	max-width: $width_xl;
+}
+.max-width-xxl{
+	max-width: $width_xxl;
+}
+.max-width-auto{
+	max-width: $width_full;
 }
