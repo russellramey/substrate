@@ -81,16 +81,12 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./_assets/_src/js/editor.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./_assets/_src/js/editor.js":
-/*!***********************************!*\
-  !*** ./_assets/_src/js/editor.js ***!
-  \***********************************/
-/*! no static exports found */
+/***/ 2:
 /***/ (function(module, exports) {
 
 
@@ -98,4 +94,3 @@
 /***/ })
 
 /******/ });
-//# sourceMappingURL=editorjs.js.map
