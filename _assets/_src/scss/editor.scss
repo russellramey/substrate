@@ -1,11 +1,9 @@
 // Variables
 @import 'variables';
 
-// Libraries
-// Bootstrap
-@import '../../../node_modules/bootstrap/scss/bootstrap';
+// Partials
+@import 'bootstrap';
 @import './partials/color';
-// WP Block Editor
-.editor-styles-wrapper{
 
-}
+// WP Block Editor
+.editor-styles-wrapper{}

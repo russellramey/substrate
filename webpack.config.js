@@ -15,6 +15,7 @@ module.exports = {
     themejs: path.resolve( process.cwd(), '_assets', '_src/js', 'theme.js' ),
     editorjs: path.resolve( process.cwd(), '_assets', '_src/js', 'editor.js' ),
     theme: path.resolve( process.cwd(), '_assets', '_src/scss', 'theme.scss' ),
+    bootstrap: path.resolve( process.cwd(), '_assets', '_src/scss', 'bootstrap.scss' ),
     editor: path.resolve( process.cwd(), '_assets', '_src/scss', 'editor.scss' ),
   },
   output: {
