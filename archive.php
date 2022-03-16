@@ -22,7 +22,7 @@ get_header(); ?>
                 </div>
 
                 <div class="entry-body">
-                    <ul class="row p-0">
+                    <ul class="post-list row p-0" style="list-style: none">
                         <?php
                         // WP Loop
                         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
