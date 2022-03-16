@@ -4,12 +4,13 @@
 ** CARD Element
 ** @param Array ($args)
 ** $args[
+        layout: String
         type: String
         cta: Boolean
     ]
 ************************************************************/
 ?>
-<div class="card <?php echo $args['type'];?> <?php echo ($args['min']) ? 'card-min' : '';?>">
+<div class="card <?php echo $args['type'];?> <?php echo ($args['layout']) ? $args['layout'] : 'card-default';?> <?php echo ($args['min']) ? 'card-min' : '';?>">
     <div class="card-header text-light"></div>
 
     <?php

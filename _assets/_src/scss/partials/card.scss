@@ -32,4 +32,23 @@
     .card-action{
         margin: 0;
     }
+    &.card-dark{
+        .card-body{
+            display: block;
+            background: $black;
+            color: $white;
+        }
+        .card-title{
+            margin: .5rem .25rem;
+        }
+    }
+    &.card-min{
+        .card-body{
+            >p,
+            >.card-text,
+            .btn{
+                display: none;
+            }
+        }
+    }
 }
