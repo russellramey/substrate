@@ -7,8 +7,9 @@
 function substrate_theme_colors() {
 	// Disable custom color selection
 	add_theme_support( 'disable-custom-colors' );
-	// Editor Color Palette (Sabre brand)
-	add_theme_support( 'editor-color-palette', array(
+	// Editor Color Palette
+	// Apply filter to be able to edit data array in child theme
+	add_theme_support( 'editor-color-palette', apply_filters( 'editor-color-palette', array(
 		array('name' => 'BS - Blue', 'slug' => 'blue', 'color' => '#0d6efd'),
 		array('name' => 'BS - Indigo', 'slug' => 'indigo', 'color' => '#6610f2'),
 	    array('name' => 'BS - Purple', 'slug' => 'purple', 'color' => '#B10BFF'),
@@ -26,7 +27,7 @@ function substrate_theme_colors() {
 		array('name' => 'BS - White', 'slug' => 'white', 'color' => '#ffffff'),
 		array('name' => 'BS - Dark', 'slug' => 'dark', 'color' => '#212529'),
 		array('name' => 'BS - Black', 'slug' => 'black', 'color' => '#000000')
-	));
+	)));
 }
 // Add setup to theme
 add_action( 'after_setup_theme', 'substrate_theme_colors' );
