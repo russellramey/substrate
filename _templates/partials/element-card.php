@@ -10,7 +10,7 @@
     ]
 ************************************************************/
 ?>
-<div class="card <?php echo $args['type'];?> <?php echo ($args['layout']) ? $args['layout'] : 'card-default';?> <?php echo ($args['min']) ? 'card-min' : '';?>">
+<div class="card <?php echo isset($args['layout']) ? $args['layout'] : 'card-default';?> <?php echo isset($args['min']) ? 'card-min' : '';?>" data-card-type="<?php echo isset($args['type']) ? $args['type'] : 'default';?>">
     <div class="card-header text-light"></div>
 
     <?php
