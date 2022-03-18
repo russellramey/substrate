@@ -1,33 +1,7 @@
-// // Imports
-// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
-//
-// // Fonts
-// $font-body: 'Work Sans', Arial, sans-serif;
-// $font-headline: 'Playfair Display', Times, serif;
-// // $font-body: Helvetica, Arial, sans-serif;
-// // $font-headline: Times, serif;
-// $font-weight-bold: 700;
-// $font-weight-regular: 400;
-// $font-size-default: 1.125rem;
-// $font-size-sm: .75rem;
-// $font-size-md: .875rem;
-// $font-size-lg: 1.313rem;
-// $font-size-h1: 3rem;
-// $font-size-h2: 2.25rem;
-// $font-size-h3: 1.5rem;
-// $font-size-drama: 6rem;
-
-// // Theme Colors
-// $hos-gold: #DBFF00;
-// $hos-purple: #B10BFF;
-// $hos-light: #FBFBFB;
-// $hos-dark: #212121;
-// $hos-gray: #818181;
-// $hos-gray-alt: #E5E5E5;
-
 // Fontsize
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-sm: $font-size-base * .875;
+$font-size-md: $font-size-base * 1.125;
 $font-size-lg: $font-size-base * 1.25;
 $h1-font-size: $font-size-base * 2.5;
 $h2-font-size: $font-size-base * 2;

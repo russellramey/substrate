@@ -3,7 +3,10 @@
 
 // Partials
 @import 'bootstrap';
-@import './partials/color';
+
 
 // WP Block Editor
-.editor-styles-wrapper{}
+.editor-styles-wrapper{
+    @import './partials/typography';
+    @import './partials/color';
+}
