@@ -15,7 +15,12 @@ function substrate_theme_load_scripts() {
 // Theme dashboard/editor scripts
 add_action( 'admin_enqueue_scripts', 'substrate_theme_load_admin_scripts', 1 );
 function substrate_theme_load_admin_scripts() {
-	// Editor functions
-	wp_enqueue_script( 'substrate-editor-functions', get_template_directory_uri() . '/_assets/editorjs.js', '', filemtime( plugin_dir_path( dirname(__FILE__) ) . '_assets/editorjs.js' ));
+	// Current screen
+	$currentScreen = get_current_screen();
+	// If current screen is post edit screen, load block styles/script
+	if($currentScreen->is_block_editor){
+		// Editor functions
+		wp_enqueue_script( 'substrate-editor-functions', get_template_directory_uri() . '/_assets/editorjs.js', '', filemtime( plugin_dir_path( dirname(__FILE__) ) . '_assets/editorjs.js' ));
+	}
 }
 ?>
