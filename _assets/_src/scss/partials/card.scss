@@ -4,11 +4,13 @@
     max-width: 100%;
     margin: 0;
     transition: all 200ms ease-in-out;
+    margin-bottom: 1.25rem;
     .card-image{
         position: relative;
         overflow: hidden;
         position: relative;
         padding-top: 54.25%;
+        height: 100%;
         img,
         a{
             display: block;
@@ -17,6 +19,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
         img{
             top: 50%;
@@ -24,13 +27,24 @@
             height: 100%;
         }
     }
+    .card-body{
+        .card-title{
+            a{
+                color: inherit;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: revert;
+                }
+            }
+        }
+        .card-action{
+            margin: 0;
+        }
+    }
     .card-header,
     .card-footer{
         display: none;
 
-    }
-    .card-action{
-        margin: 0;
     }
     &.card-dark{
         .card-body{
@@ -46,7 +60,7 @@
         .card-body{
             >p,
             >.card-text,
-            .btn{
+            >.card-action{
                 display: none;
             }
         }
