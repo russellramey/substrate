@@ -13,9 +13,7 @@
 ?>
 <div class="card <?php echo isset($args['layout']) ? $args['layout'] : 'card-default';?> <?php echo isset($args['min']) ? 'card-min' : '';?>" data-card-type="<?php echo isset($args['type']) ? $args['type'] : 'default';?>">
     <div class="card-header text-light"></div>
-
     <div class="row g-0">
-
         <?php
         // If has thumbnail, show card-image
         if(has_post_thumbnail()){ ?>
