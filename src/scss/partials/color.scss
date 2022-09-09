@@ -2,6 +2,28 @@
 // Text colors
 .has-text-color,
 .has-inline-color{
+	&.has-mpc-yellow-color{
+		color: $yellow;
+	}
+	&.has-mpc-blue-color{
+		color: $blue;
+	}
+	&.has-mpc-light-color{
+		color: $light;
+	}
+	&.has-mpc-dark-color{
+		color: $dark;
+	}
+	&.has-mpc-gray-light-color{
+		color: $gray-light;
+	}
+	&.has-mpc-gray-dark-color{
+		color: $gray-dark;
+	}
+	&.has-mpc-gray-color{
+		color: $gray;
+	}
+
 	&.has-blue-color{
 		color: $blue;
 	}
@@ -58,6 +80,28 @@
 .has-background{
 	padding: 1rem 1.5rem;
 	border-radius: .25rem;
+	&.has-mpc-yellow-background-color{
+		background-color: $yellow;
+	}
+	&.has-mpc-blue-background-color{
+		background-color: $blue;
+	}
+	&.has-mpc-light-background-color{
+		background-color: $light;
+	}
+	&.has-mpc-dark-background-color{
+		background-color: $dark;
+	}
+	&.has-mpc-gray-light-background-color{
+		background-color: $gray-light;
+	}
+	&.has-mpc-gray-dark-background-color{
+		background-color: $gray-dark;
+	}
+	&.has-mpc-gray-background-color{
+		background-color: $gray-dark;
+	}
+
 	&.has-blue-background-color{
 		background-color: $blue;
 	}

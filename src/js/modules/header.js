@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', function(){
     // Nav open
     nav.addEventListener('show.bs.collapse', function (event) {
         hamburger.classList.add('open');
+        header.classList.add('nav-open');
         console.log('nav show');
     });
-
     // Nav close
     nav.addEventListener('hide.bs.collapse', function (event) {
         hamburger.classList.remove('open');
-        console.log('nav hide');
+    });
+    nav.addEventListener('hidden.bs.collapse', function (event) {
+        header.classList.remove('nav-open');
     });
 
 }, false);

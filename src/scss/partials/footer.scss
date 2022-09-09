@@ -1,0 +1,61 @@
+#footer{
+
+    .footer-top{
+        color: $light;
+        .navbar{
+            padding: 3rem .5rem;
+            background: $gray-dark;
+            .footer-nav{
+                width: 100%;
+                ul{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    >li{
+                        background: none;
+                        margin: 0;
+                        padding: 0 .5rem;
+                    }
+                    @media screen and (max-width: $breakpoint_sm){
+                        justify-content: start;
+                    }
+                }
+
+                .dropdown-menu{
+                    display: block;
+                    background: none;
+                    border: 0;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+                .sub-menu-link{
+                    padding: 0;
+                }
+                .dropdown-toggle{
+                    &::after{
+                        display: none;
+                    }
+                }
+                .top-menu-link{
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                }
+                .nav-item.disabled{
+                    >a{
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        color: $gray;
+        font-size: $font-size-sm;
+        .navbar{
+            background: $black;
+            padding: 1.5rem;
+        }
+    }
+}

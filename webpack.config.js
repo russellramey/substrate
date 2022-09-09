@@ -12,11 +12,11 @@ const production = process.env.NODE_ENV === '';
 module.exports = {
   ...defaultConfig,
   entry: {
-    themejs: path.resolve( process.cwd(), '_assets', '_src/js', 'theme.js' ),
-    editorjs: path.resolve( process.cwd(), '_assets', '_src/js', 'editor.js' ),
-    theme: path.resolve( process.cwd(), '_assets', '_src/scss', 'theme.scss' ),
-    bootstrap: path.resolve( process.cwd(), '_assets', '_src/scss', 'bootstrap.scss' ),
-    editor: path.resolve( process.cwd(), '_assets', '_src/scss', 'editor.scss' ),
+    themejs: path.resolve( process.cwd(), 'src', 'js', 'theme.js' ),
+    editorjs: path.resolve( process.cwd(), 'src', 'js', 'editor.js' ),
+    theme: path.resolve( process.cwd(), 'src', 'scss', 'theme.scss' ),
+    bootstrap: path.resolve( process.cwd(), 'src', 'scss', 'bootstrap.scss' ),
+    editor: path.resolve( process.cwd(), 'src', 'scss', 'editor.scss' ),
   },
   output: {
     path: path.resolve(__dirname, '_assets'),

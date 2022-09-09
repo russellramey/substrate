@@ -1,0 +1,17 @@
+.wp-block-image{
+    figcaption{
+        font-size: smaller;
+        color: $gray;
+        opacity: .75;
+    }
+    @media screen and (max-width: $breakpoint-sm){
+        figure{
+            display: block;
+            float: none !important;
+            margin: 0 auto !important;
+        }
+        img{
+            width: auto;
+        }
+    }
+}

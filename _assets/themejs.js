@@ -81,53 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./_assets/_src/js/theme.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/theme.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./_assets/_src/js/modules/header.js":
-/*!*******************************************!*\
-  !*** ./_assets/_src/js/modules/header.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Elements
-  var nav = document.getElementById('navigation');
-  var hamburger = document.getElementById('hamburger'); // Nav open
-
-  nav.addEventListener('show.bs.collapse', function (event) {
-    hamburger.classList.add('open');
-    console.log('nav show');
-  }); // Nav close
-
-  nav.addEventListener('hide.bs.collapse', function (event) {
-    hamburger.classList.remove('open');
-    console.log('nav hide');
-  });
-}, false);
-
-/***/ }),
-
-/***/ "./_assets/_src/js/theme.js":
-/*!**********************************!*\
-  !*** ./_assets/_src/js/theme.js ***!
-  \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./_assets/_src/js/modules/header.js");
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header__WEBPACK_IMPORTED_MODULE_0__);
-// Import bootstrap globally
-window.bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js"); // Import modules
-
-
-
-/***/ }),
 
 /***/ "./node_modules/@popperjs/core/lib/createPopper.js":
 /*!*********************************************************!*\
@@ -8338,6 +8295,52 @@ enableDismissTrigger(Toast);
 
 defineJQueryPlugin(Toast);
 
+
+
+
+/***/ }),
+
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Elements
+  var nav = document.getElementById('navigation');
+  var hamburger = document.getElementById('hamburger'); // Nav open
+
+  nav.addEventListener('show.bs.collapse', function (event) {
+    hamburger.classList.add('open');
+    header.classList.add('nav-open');
+    console.log('nav show');
+  }); // Nav close
+
+  nav.addEventListener('hide.bs.collapse', function (event) {
+    hamburger.classList.remove('open');
+  });
+  nav.addEventListener('hidden.bs.collapse', function (event) {
+    header.classList.remove('nav-open');
+  });
+}, false);
+
+/***/ }),
+
+/***/ "./src/js/theme.js":
+/*!*************************!*\
+  !*** ./src/js/theme.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header__WEBPACK_IMPORTED_MODULE_0__);
+// Import bootstrap globally
+window.bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js"); // Import modules
 
 
 

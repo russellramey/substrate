@@ -1,0 +1,51 @@
+.navigation{
+    justify-content: flex-end;
+
+    // Dropdown on hover
+    .navigation-menu{
+        li.nav-item{
+            &:hover{
+                .dropdown-menu{
+                    display: block;
+                    .dropdown-item:active,
+                    .dropdown-item:hover{
+                        background: $light;
+                    }
+                }
+            }
+            .dropdown-item{
+                a{
+                    padding-top: .25rem;
+                    padding-bottom: .25rem;
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    // Responsive mobile
+    @media screen and (max-width: $breakpoint-md){
+        overflow: auto;
+        .navigation-menu{
+            min-height: 100vh;
+            .dropdown-menu{
+                display: block;
+                border: 0;
+            }
+        }
+    }
+}
+
+// Nav active/open
+.nav-open{
+    .navigation{
+        li.nav-item{
+            a{
+                color: $dark;
+                &:hover{
+                    color: lighten($dark, 20);
+                }
+            }
+        }
+    }
+}

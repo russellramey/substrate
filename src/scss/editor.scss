@@ -1,0 +1,25 @@
+// Variables
+@import 'variables';
+
+// Libraries
+// Bootstrap
+@import 'bootstrap';
+
+// WP Block Editor
+.editor-styles-wrapper{
+	font-family: $font-body !important;
+	font-size: $font-size-base;
+	// Partials
+	@import './partials/typography';
+	@import './partials/color';
+	@import './partials/card';
+
+	// Blocks
+	@import './blocks/quote';
+	@import './blocks/card';
+}
+
+// Misc
+legend{
+	font-size: revert;
+}

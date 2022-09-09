@@ -1,0 +1,31 @@
+.brand{
+    position: relative;
+    display: flex;
+    .brand-logo{
+        width: 100%;
+        max-width: 200px;
+        .st0{
+            fill: $light;
+        }
+    }
+    .brand-link{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (max-width: 796px){
+    }
+}
+// Nav active/open
+.nav-open{
+    .brand{
+        .brand-logo{
+            .st0{
+                fill: $blue;
+            }
+        }
+    }
+}
