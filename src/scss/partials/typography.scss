@@ -2,17 +2,10 @@
 body, p, ol, ul {
   font-family: $font-body;
 }
-h1, h2, h3{
+h1, h2, h3, h4, h5, h6{
     font-family: $font-headline;
     font-weight: $font-weight-bold;
     margin-top: 0;
-}
-h4, h5, h6{
-    font-family: $font-body;
-    font-weight: $font-weight-bold;
-    margin-top: 0;
-    letter-spacing: .15rem;
-    text-transform: uppercase;
 }
 h1{
     font-size: $h1-font-size;
@@ -37,6 +30,9 @@ p{
 }
 
 // Text Sizes
+.has-smaller-font-size{
+	font-size: $font-size-sm;
+}
 .has-small-font-size{
 	font-size: $font-size-sm;
 }
@@ -46,12 +42,9 @@ p{
 .has-large-font-size{
 	font-size: $font-size-lg;
 }
+.has-larger-font-size{
+	font-size: $font-size-lg;
+}
 .has-extra-large-font-size{
 	font-size: $font-size-lg * 1.5;
-}
-.has-drama-font-size{
-	font-size: $drama-font-size;
-    font-family: $font-body;
-    font-weight: $font-weight-bold;
-    line-height: .75;
 }
