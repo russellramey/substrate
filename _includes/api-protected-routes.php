@@ -6,8 +6,8 @@
 *
 ************************************************************/
 // Filter REST Endpoints for user authenticaiton
-add_filter( 'rest_endpoints', 'rest_api_protected_routes');
-function rest_api_protected_routes( $endpoints ) {
+add_filter( 'rest_endpoints', 'substrate_rest_api_protected_routes');
+function substrate_rest_api_protected_routes( $endpoints ) {
     // If user is not logged in
     if(!is_user_logged_in()){
         // Remove access to /users

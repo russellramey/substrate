@@ -8,8 +8,8 @@
 ** Format: ?filter[KEY]=VALUE
 *
 ************************************************************/
-add_action( 'rest_api_init', 'rest_api_filter_add_filters' );
-function rest_api_filter_add_filters() {
+add_action( 'rest_api_init', 'substrate_rest_api_filter_add_filters' );
+function substrate_rest_api_filter_add_filters() {
 	foreach ( get_post_types( array( 'show_in_rest' => true ), 'objects' ) as $post_type ) {
 		add_filter( 'rest_' . $post_type->name . '_query', 'rest_api_filter_add_filter_param', 10, 2 );
 	}

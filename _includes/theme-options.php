@@ -4,20 +4,20 @@
 	Global options for theme: social profiles, Google Analytics, Custom CSS, etc...
 ************************************************************************************/
 //register settings
-function theme_settings_init(){
+function substrate_theme_settings_init(){
     register_setting( 'theme_settings', 'theme_settings' );
 }
 //add settings page to menu
-function add_settings_page() {
-    add_menu_page( __( 'Theme Options' ), __( 'Options' ), 'manage_options', 'settings', 'theme_settings_page');
+function substrate_add_settings_page() {
+    add_menu_page( __( 'Theme Options' ), __( 'Options' ), 'manage_options', 'settings', 'substrate_theme_settings_page');
 }
 //add actions
-add_action( 'admin_init', 'theme_settings_init' );
-add_action( 'admin_menu', 'add_settings_page' );
+add_action( 'admin_init', 'substrate_theme_settings_init' );
+add_action( 'admin_menu', 'substrate_add_settings_page' );
 
 
 //start settings page
-function theme_settings_page() {
+function substrate_theme_settings_page() {
     if ( ! isset( $_REQUEST['settings-updated'] ) )
         $_REQUEST['settings-updated'] = false;
     ?>

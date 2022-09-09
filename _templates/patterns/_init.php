@@ -1,6 +1,6 @@
 <?php
 // Block patterns
-class MPC_Substrate_Content_Block_Patterns
+class Substrate_Content_Block_Patterns
 {
 
     // Patterns array
