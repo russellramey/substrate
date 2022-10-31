@@ -81,12 +81,16 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/scss/bootstrap.scss");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 4:
+/***/ "./src/scss/bootstrap.scss":
+/*!*********************************!*\
+  !*** ./src/scss/bootstrap.scss ***!
+  \*********************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -94,3 +98,4 @@
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bootstrap.js.map
