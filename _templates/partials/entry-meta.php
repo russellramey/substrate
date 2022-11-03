@@ -10,16 +10,14 @@
 <div class="entry-meta">
 	<div class="row">
 		<div class="col col-left">
-			<div class="entry-date">
-				<span><?php the_date('m.d.Y'); ?></span>
-			</div>
-			<?php
-				// Get entry category menu
-				get_template_part('_templates/partials/entry-tags')
-			?>
+			<span class="entry-date"><?php the_date('m.d.Y'); ?></span>
+			<span class="entry-author">- <?php the_author(); ?></span>
 		</div>
 		<div class="col col-last text-end">
-			<span class="entry-author"><?php the_author(); ?></span>
+			<?php
+				// Get entry tag list
+				get_template_part('_templates/partials/entry-tags')
+			?>
 		</div>
 	</div>
 </div>

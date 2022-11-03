@@ -1,7 +1,14 @@
 .entry-tags{
+    span{
+        margin-right: .75rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
     a{
         color: $dark;
         text-decoration: none;
+        text-transform: capitalize;
         &:hover{
             text-decoration: underline;
         }
