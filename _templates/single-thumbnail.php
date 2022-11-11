@@ -5,9 +5,7 @@
 ** Single view for posts that HAVE a featured image/thumbnail.
 *
 ************************************************************/
-
-// Include header
-get_header(); ?>
+?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(['entry-content']); ?>>
     <?php
@@ -32,5 +30,3 @@ get_header(); ?>
 
     <?php endwhile; endif; ?>
 </div>
-
-<?php get_footer(); ?>
