@@ -12,6 +12,7 @@ include '_includes/theme-scripts.php';
 include '_includes/theme-styles.php';
 include '_includes/theme-colors.php';
 include '_includes/theme-typography.php';
+include '_includes/theme-options.php';
 
 /************************************************************************************
 *** Theme Methods

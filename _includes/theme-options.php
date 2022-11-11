@@ -1,145 +1,57 @@
 <?php
-/************************************************************************************
-*** Theme Options
-	Global options for theme: social profiles, Google Analytics, Custom CSS, etc...
-************************************************************************************/
-//register settings
-function substrate_theme_settings_init(){
+/***********************************************************
+*
+** THEME - OPTIONS
+** Register theme options/settings
+*
+************************************************************/
+// Register settings
+function substrate_settings_init(){
     register_setting( 'theme_settings', 'theme_settings' );
 }
-//add settings page to menu
+// Add settings page to menu
 function substrate_add_settings_page() {
-    add_menu_page( __( 'Theme Options' ), __( 'Options' ), 'manage_options', 'settings', 'substrate_theme_settings_page');
+    add_menu_page( __( 'Theme Options' ), __( 'Site Options' ), 'manage_options', 'settings', 'substrate_settings_page');
 }
-//add actions
-add_action( 'admin_init', 'substrate_theme_settings_init' );
+// Add theme setting nav item
 add_action( 'admin_menu', 'substrate_add_settings_page' );
+// Add theme setting options
+add_action( 'admin_init', 'substrate_settings_init' );
 
 
-//start settings page
-function substrate_theme_settings_page() {
+// Theme setting page
+function substrate_settings_page() {
+    // If request is not updated
     if ( ! isset( $_REQUEST['settings-updated'] ) )
         $_REQUEST['settings-updated'] = false;
     ?>
-    <div id="theme-options" style="margin-right:20px;">
-        <h1><?php _e( 'Global Options' ) //your admin panel title ?></h1>
-        <br />
+
+    <div id="poststuff" class="theme-options wrap">
+        <h1><?php _e( 'Global Options' ) ?></h1>
+
         <?php
         //show saved options message
         if ( false !== $_REQUEST['settings-updated'] ) : ?>
             <div id="message" class="updated notice notice-success is-dismissible" style="margin:0; margin-bottom:20px;"><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
         <?php endif; ?>
 
-        <form method="post" action="options.php" class="poststuff">
+        <form method="post" action="options.php">
             <?php settings_fields( 'theme_settings' ); ?>
             <?php
                 global $options;
             ?>
 
-            <div class="section postbox">
-                <div class="inside">
-                    <h2 class="hndle ui-sortable-handle"><span>Home Page</span></h2>
-                    <br />
-                    <div class="option-item">
-                        <p><b><?php _e( 'Slider' ); ?></b></p>
-                    	<p><input id="theme_settings[homeslider]" type="text" size="36" name="theme_settings[homeslider]" value="<?php esc_attr_e( $options['homeslider'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'Add your shortcode for the slider you want to be on the home page.' ); ?></span></p>
-                    </div>
-                </div>
-            </div>
+            <?php
+            // Include theme option sections
+            include(locate_template('_includes/theme-options-social.php'));
+            include(locate_template('_includes/theme-options-seo.php'));
+            ?>
 
-            <div class="section postbox">
-                <div class="inside">
-                    <h2 class="hndle ui-sortable-handle"><span>Global</span></h2>
-                    <br />
-                    <div class="option-item">
-                        <p><b><?php _e( 'Template' ); ?></b></p>
-                    	<p><select name="theme_settings[theme-template]" value="<?php esc_attr_e( isset($options['theme-template']) ? $options['theme-template'] : 'theme-default' ); ?>">
-                              <option value="theme-default" <?php selected( 'theme=default' == $options['theme-template'] ); ?>>Default</option>
-                              <option value="theme-light" <?php selected( 'theme-light' == $options['theme-template'] ); ?>>Light</option>
-                          </select><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'Choose to use the default dark template or the light template globally.' ); ?></span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Profiles -->
-            <div class="section postbox">
-                <div class="inside">
-                    <h2 class="hndle ui-sortable-handle"><span>Social Profiles</span></h2>
-                    <div class="option-item">
-                    	<p><b><?php _e( 'Twitter' ); ?></b></p>
-                    	<p><input id="theme_settings[twitterurl]" type="text" size="36" name="theme_settings[twitterurl]" value="<?php esc_attr_e( $options['twitterurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Twitter profile' ); ?></span></p>
-                    </div>
-
-                    <div class="option-item">
-                    	<p><b><?php _e( 'Facebook' ); ?></b></p>
-                    	<p><input id="theme_settings[facebookurl]" type="text" size="36" name="theme_settings[facebookurl]" value="<?php esc_attr_e( $options['facebookurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Facebook profile' ); ?></span></p>
-                    </div>
-
-
-                    <div class="option-item">
-                    	<p><b><?php _e( 'YouTube' ); ?></b></p>
-                    	<p><input id="theme_settings[youtubeurl]" type="text" size="36" name="theme_settings[youtubeurl]" value="<?php esc_attr_e( $options['youtubeurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to YouTube channel/profile' ); ?></span></p>
-                    </div>
-
-                    <div class="option-item">
-                        <p><b><?php _e( 'Vimeo' ); ?></b></p>
-                        <p><input id="theme_settings[vimeourl]" type="text" size="36" name="theme_settings[vimeourl]" value="<?php esc_attr_e( $options['vimeourl'] ); ?>" /><br/>
-                        <span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Vimeo channel/profile' ); ?></span></p>
-                    </div>
-
-                    <div class="option-item">
-                    	<p><b><?php _e( 'Linked In' ); ?></b></p>
-                    	<p><input id="theme_settings[linkedinurl]" type="text" size="36" name="theme_settings[linkedinurl]" value="<?php esc_attr_e( $options['linkedinurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Linked In profile' ); ?></span></p>
-                    </div>
-
-                    <div class="option-item">
-                    	<p><b><?php _e( 'Instagram' ); ?></b></p>
-                    	<p><input id="theme_settings[instagramurl]" type="text" size="36" name="theme_settings[instagramurl]" value="<?php esc_attr_e( $options['instagramurl'] ); ?>" /><br/>
-                    	<span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Instagram profile' ); ?></span></p>
-                    </div>
-
-                    <div class="option-item">
-                        <p><b><?php _e( 'Google+' ); ?></b></p>
-                        <p><input id="theme_settings[googleurl]" type="text" size="36" name="theme_settings[googleurl]" value="<?php esc_attr_e( $options['googleurl'] ); ?>" /><br/>
-                        <span style="font-size:12px; font-style:italic;"><?php _e( 'URL to Google profile' ); ?></span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section postbox">
-                <div class="inside">
-                    <h2 class="hndle ui-sortable-handle"><span>Google Analytics</span></h2>
-                    <br />
-                    <div class="option-item">
-                    	<textarea id="theme_settings[ga_code]" rows="10" cols="100" name="theme_settings[ga_code]" value=""><?php esc_attr_e($options['ga_code']); ?></textarea>
-                    	<p><span style="font-size:12px; font-style:italic;">Add your Google Analytics code here. You can get this code from your Google account.</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section postbox">
-                <div class="inside">
-                    <h2 class="hndle ui-sortable-handle"><span>Footer/Copyright</span></h2>
-                    <br />
-                    <div class="option-item">
-                    	<textarea id="theme_settings[copyright]" rows="10" cols="100" name="theme_settings[copyright]" value=""><?php esc_attr_e($options['copyright']); ?></textarea>
-                    	<p><span style="font-size:12px; font-style:italic;">Change the copyright text in the footer of theme, if blank default format will be used.</span></p>
-                    </div>
-                </div>
-            </div>
             <br />
             <p><input class="button button-primary button-large" name="submit" id="submit" value="Save Changes" type="submit"></p>
         </form>
 
-    </div>
+    </div><!-- END wrap -->
 <?php }
-
-//get & store theme options in global variable
+//get theme options
 $options = get_option( 'theme_settings' );
-?>
